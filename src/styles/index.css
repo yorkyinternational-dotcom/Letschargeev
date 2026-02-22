@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        @apply font-sans antialiased overflow-x-hidden bg-white text-primary;
+        line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-sans tracking-tight leading-[1.1] font-black text-primary uppercase;
+    }
+
+    h1 {
+        @apply text-6xl md:text-8xl;
+    }
+
+    h2 {
+        @apply text-5xl md:text-7xl;
+    }
+}
+
+@layer components {
+    /* LCEv Minimalist Components */
+
+    .card-modern {
+        @apply p-12 rounded-[2rem] bg-white border border-slate-200 transition-all duration-300;
+    }
+
+    .card-modern:hover {
+        @apply border-accent shadow-xl -translate-y-1;
+    }
+
+    .btn-primary {
+        @apply px-12 py-5 rounded-full font-black transition-all duration-300 flex items-center justify-center gap-3 text-white uppercase tracking-[0.3em] text-[11px] bg-primary hover:bg-accent active:scale-95;
+    }
+
+    .btn-accent {
+        @apply px-12 py-5 rounded-full font-black transition-all duration-300 flex items-center justify-center gap-3 text-primary uppercase tracking-[0.3em] text-[11px] border-2 border-primary hover:bg-primary hover:text-white active:scale-95;
+    }
+
+    .glass-tile {
+        @apply bg-slate-50 border border-slate-200 p-8 rounded-[1.5rem] transition-all;
+    }
+
+    .text-gradient {
+        @apply text-accent;
+    }
+}
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+}
+
+p {
+    @apply text-slate-600 font-medium;
+}
+
+.label-caps {
+    @apply text-[10px] font-black uppercase tracking-[0.5em] text-accent mb-4 block;
+}
+
+.outline-text {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    color: transparent;
+}
