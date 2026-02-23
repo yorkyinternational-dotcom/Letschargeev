@@ -12,7 +12,7 @@ const Logo = ({ className = "h-10 md:h-12", withText = true }) => {
             {withText && (
                 <div className="flex flex-col leading-none">
                     <span className="text-primary font-black tracking-tighter text-xl md:text-2xl uppercase">
-                        LETS<span className="text-eco">CHARGE</span>
+                        LETS<span className="text-eco"></span>
                     </span>
                     <span className="text-[8px] font-black uppercase tracking-[0.5em] text-primary/40">
                         Smart Mobility

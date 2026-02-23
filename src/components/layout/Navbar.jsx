@@ -31,39 +31,43 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-8'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="flex items-center">
-          <Logo className={scrolled ? "h-8 md:h-10" : "h-10 md:h-12"} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative">
+        {/* Logo - Left Aligned */}
+        <Link to="/" className="flex items-center shrink-0">
+          <Logo className={scrolled ? "h-8 md:h-10" : "h-10 md:h-12"} withText={false} />
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-10">
+        {/* Desktop Navigation - Centered */}
+        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
           {allLinks.filter(l => l.name !== 'Home').map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-colors ${isSpecialPage ? 'text-accent' : 'text-primary hover:text-accent'
+              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-colors whitespace-nowrap ${isSpecialPage ? 'text-accent' : 'text-primary hover:text-accent'
                 }`}
             >
               {link.name}
             </Link>
           ))}
+        </div>
+
+        {/* Actions - Right Aligned */}
+        <div className="flex items-center gap-6">
           <Link
             to="/partner-with-us"
-            className={`${isSpecialPage && location.pathname === '/partner-with-us' ? 'bg-accent text-white' : 'btn-primary'} !px-8 !py-3 !text-[10px] !tracking-[0.4em] rounded-[1rem] font-black transition-all`}
+            className={`hidden lg:block ${isSpecialPage && location.pathname === '/partner-with-us' ? 'bg-accent text-white' : 'btn-primary'} !px-8 !py-3 !text-[10px] !tracking-[0.4em] rounded-[1rem] font-black transition-all`}
           >
             PARTNER
           </Link>
-        </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-primary"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-primary"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Overlay */}

@@ -32,7 +32,7 @@ const OurApp = () => {
                                 Mobile Experience
                             </span>
                             <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-tight">
-                                Power in Your <span className="text-accent">Pocket.</span>
+                                <span className="text-white"> Power in Your Pocket.</span>
                             </h1>
                             <p className="text-xl text-white/60 mb-10 leading-relaxed max-w-lg">
                                 Experience the future of EV charging with the Lets charge EV mobile app. Manage your charging sessions, find stations, and pay seamlessly.
