@@ -44,7 +44,7 @@ const PartnerWithUsPage = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="label-caps !text-accent opacity-60">Strategic Alliances</span>
-                        <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase italic leading-[0.85]">
+                        <h1 className="text-4xl md:text-8xl font-black text-white mb-8 tracking-[-0.04em] md:tracking-tighter uppercase italic leading-[0.85]">
                             BUILD THE INFRASTRUCTURE <br />
                             <span className="text-eco">OF TOMORROW.</span>
                         </h1>
@@ -70,7 +70,7 @@ const PartnerWithUsPage = () => {
                                 <div className="w-16 h-16 rounded-2xl bg-eco text-white flex items-center justify-center mb-8 transition-colors">
                                     <type.icon size={32} />
                                 </div>
-                                <h3 className="text-4xl font-black text-primary mb-6 uppercase italic tracking-tighter leading-none">{type.title}</h3>
+                                <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 uppercase italic tracking-tighter leading-none">{type.title}</h3>
                                 <p className="text-slate-500 mb-10 font-medium leading-relaxed">{type.description}</p>
                                 <ul className="space-y-4">
                                     {type.benefits.map((benefit, j) => (
