@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, ExternalLink, Globe, Shield, CreditCard, Smartphone, ArrowUpCircle } from 'lucide-react';
+import { Mail, Phone, ExternalLink, Globe, Shield, CreditCard, Smartphone, ArrowUpCircle, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer = () => {
@@ -15,9 +15,16 @@ const Footer = () => {
               <Logo withText={true} />
             </Link>
             <p className="text-white/40 max-w-sm mb-10">Architecting the infrastructure for India's electric revolution with surgical precision.</p>
-            <div className="flex gap-4">
-              {['FB', 'TW', 'LI', 'IG'].map(social => (
-                <span key={social} className="text-[10px] font-black hover:text-eco cursor-pointer transition-colors">{social}</span>
+            <div className="flex gap-6">
+              {[
+                { icon: Facebook, label: 'FB' },
+                { icon: Twitter, label: 'TW' },
+                { icon: Linkedin, label: 'LI' },
+                { icon: Instagram, label: 'IG' }
+              ].map((social, i) => (
+                <a key={i} href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-eco hover:text-black transition-all group">
+                  <social.icon size={18} className="group-hover:scale-110 transition-transform" />
+                </a>
               ))}
             </div>
           </div>

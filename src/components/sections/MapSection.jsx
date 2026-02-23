@@ -34,7 +34,7 @@ const MapSection = () => {
                     <p className="text-xl max-w-2xl">Real-time status tracking across India's most intelligent EV charging grid.</p>
                 </div>
 
-                <div className="h-[600px] w-full rounded-[2rem] overflow-hidden border border-slate-200">
+                <div className="h-[400px] md:h-[600px] w-full rounded-[2rem] overflow-hidden border border-slate-200">
                     <MapContainer center={[28.5355, 77.3910]} zoom={10} scrollWheelZoom={false} className="h-full w-full">
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'

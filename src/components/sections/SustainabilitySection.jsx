@@ -167,7 +167,7 @@ const SustainabilitySection = () => {
                                     </div>
 
                                     <div className="relative mb-16">
-                                        <h3 className="text-[11rem] font-black text-white leading-[0.75] italic tracking-tighter drop-shadow-[0_0_40px_rgba(46,213,115,0.3)] flex items-start">
+                                        <h3 className="text-[8rem] md:text-[11rem] font-black text-white leading-[0.75] italic tracking-tighter drop-shadow-[0_0_40px_rgba(46,213,115,0.3)] flex items-start">
                                             9.8
                                             <span className="text-3xl font-black text-white/40 mt-4 ml-2">/10</span>
                                         </h3>
