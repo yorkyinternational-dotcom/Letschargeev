@@ -34,7 +34,7 @@ const SolutionModal = ({ solution, isOpen, onClose }) => {
                         <div className="grid lg:grid-cols-2">
                             <div className="p-12 lg:p-20 bg-slate-50">
                                 <span className="text-accent font-black tracking-widest text-sm uppercase mb-6 block">Solution Profile</span>
-                                <h2 className="text-5xl font-black text-primary mb-8 leading-tight uppercase italic">{solution.title}</h2>
+                                <h2 className="text-3xl md:text-5xl font-black text-primary mb-8 leading-tight uppercase italic">{solution.title}</h2>
                                 <p className="text-xl text-slate-500 leading-relaxed mb-12 font-medium">{solution.fullDescription}</p>
 
                                 <div className="space-y-6">

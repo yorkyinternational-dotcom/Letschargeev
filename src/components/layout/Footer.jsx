@@ -14,7 +14,7 @@ const Footer = () => {
             <Link to="/" className="mb-8 block">
               <Logo withText={true} />
             </Link>
-            <p className="text-white/40 max-w-sm mb-10">Architecting the infrastructure for India's electric revolution with surgical precision.</p>
+            <p className="text-white/40 text-[12px] md:text-sm max-w-[280px] md:max-w-sm mb-10">Architecting the infrastructure for India's electric revolution with surgical precision.</p>
             <div className="flex gap-6">
               {[
                 { icon: Facebook, label: 'FB' },

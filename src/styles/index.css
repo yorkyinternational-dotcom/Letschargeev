@@ -28,7 +28,7 @@
     }
 
     h2 {
-        @apply text-5xl md:text-7xl;
+        @apply text-4xl md:text-7xl;
     }
 }
 
@@ -82,7 +82,7 @@ p {
 }
 
 .label-caps {
-    @apply text-[10px] font-black uppercase tracking-[0.5em] text-accent mb-4 block;
+    @apply text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.5em] text-accent mb-4 block;
 }
 
 .outline-text {
