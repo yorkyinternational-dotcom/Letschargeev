@@ -26,7 +26,7 @@ const Hero = () => {
               transition={{ duration: 0.5 }}
               className="mb-8"
             >
-              <span className="label-caps tracking-[0.6em]">Smart . Tech . <span className="text-eco">Sustainable</span></span>
+              <span className="label-caps tracking-[0.3em] md:tracking-[0.6em]">Smart . Tech . <span className="text-eco">Sustainable</span></span>
             </motion.div>
 
             <motion.h1

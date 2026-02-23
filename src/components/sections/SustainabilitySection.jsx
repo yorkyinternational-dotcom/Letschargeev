@@ -63,7 +63,7 @@ const SustainabilitySection = () => {
                         >
                             <div className="flex items-center gap-4 mb-12">
                                 <div className="h-[1px] w-12 bg-eco shadow-[0_0_10px_#2ed573]"></div>
-                                <span className="text-[10px] font-black uppercase tracking-[0.5em] text-eco drop-shadow-[0_0_8px_rgba(46,213,115,0.4)]">Sustainability Infrastructure</span>
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.5em] text-eco drop-shadow-[0_0_8px_rgba(46,213,115,0.4)]">Sustainability Infrastructure</span>
                             </div>
 
                             <h2 className="text-[12vw] lg:text-[10rem] font-black text-white mb-16 tracking-tighter uppercase leading-[0.8] relative drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
