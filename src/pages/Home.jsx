@@ -22,7 +22,9 @@ const Home = () => {
             <div id="calculator">
                 <SavingsCalculator />
             </div>
-            <MapSection />
+            <div id="locate">
+                <MapSection />
+            </div>
             <div id="contact">
                 <Contact />
             </div>

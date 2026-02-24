@@ -34,8 +34,15 @@ const Navbar = () => {
       <div className={`w-full h-full absolute inset-0 -z-10 rounded-[2rem] border border-white/20 transition-all duration-500 ${scrolled ? 'bg-primary/80 backdrop-blur-2xl shadow-2xl' : 'bg-white/10 backdrop-blur-xl'}`}></div>
 
       <div className="px-6 sm:px-10 flex justify-between items-center relative">
-        {/* Logo - Left Aligned */}
-        <Link to="/" className="flex items-center shrink-0">
+        {/* Mobile App Style - Logo Center, Left Sidebar Placeholder */}
+        <div className="lg:hidden w-10">
+          <div className="w-10 h-10 rounded-full bg-primary-light/10 border border-white/10 flex items-center justify-center">
+            <Zap size={16} className="text-eco" />
+          </div>
+        </div>
+
+        {/* Logo - Center on Mobile, Left on Desktop */}
+        <Link to="/" className="flex items-center shrink-0 lg:absolute lg:left-10 lg:translate-x-0 left-1/2 -translate-x-1/2 absolute lg:static">
           <Logo className={scrolled ? "h-6 md:h-8" : "h-8 md:h-10"} withText={false} />
         </Link>
 
@@ -62,13 +69,10 @@ const Navbar = () => {
             JOIN US
           </Link>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-primary"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Notification Placeholder */}
+          <div className="lg:hidden w-10 h-10 rounded-full bg-primary-light/10 border border-white/10 flex items-center justify-center">
+            <Zap size={16} className="text-accent" />
+          </div>
         </div>
       </div>
 
