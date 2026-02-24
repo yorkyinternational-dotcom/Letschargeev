@@ -68,7 +68,7 @@ const SustainabilitySection = () => {
 
                             <h2 className="text-[12vw] lg:text-[10rem] font-black text-white mb-16 tracking-tighter uppercase leading-[0.8] relative drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                                 NET <br />
-                                <span className="text-eco italic ml-[5%] drop-shadow-[0_0_30px_rgba(46,213,115,0.6)]">ZERO.</span>
+                                <span className="text-eco italic ml-[5%] glow-green">ZERO.</span>
                                 <div className="absolute -top-10 left-0 text-[10px] font-black text-white/20 tracking-[1em] uppercase hidden md:block">Corporate Initiative 2026-30</div>
                             </h2>
 
@@ -135,18 +135,18 @@ const SustainabilitySection = () => {
                             {/* Pulsing Neon Aura */}
                             <motion.div
                                 animate={{
-                                    opacity: [0.4, 0.7, 0.4],
-                                    scale: [1, 1.1, 1]
+                                    opacity: [0.3, 0.6, 0.3],
+                                    scale: [1, 1.05, 1]
                                 }}
                                 transition={{
                                     duration: 4,
                                     repeat: Infinity,
                                     ease: "easeInOut"
                                 }}
-                                className="absolute -inset-6 bg-eco rounded-[4rem] blur-[50px] pointer-events-none"
+                                className="absolute -inset-6 bg-eco rounded-[4rem] blur-[60px] pointer-events-none"
                             />
 
-                            <div className="relative bg-eco p-[2px] bg-gradient-to-b from-white/40 via-eco to-eco/20 rounded-[3rem] shadow-[0_40px_80px_-20px_rgba(46,213,115,0.6)] group-hover:scale-[1.02] transition-transform duration-700">
+                            <div className="relative bg-eco p-[2px] bg-gradient-to-br from-eco via-yellow to-eco/20 rounded-[3rem] shadow-[0_40px_80px_-20px_rgba(123,255,0,0.4)] group-hover:scale-[1.02] transition-transform duration-700">
                                 <div className="bg-black/15 backdrop-blur-2xl rounded-[2.8rem] p-14 relative overflow-hidden h-full">
 
                                     {/* Tech Scanline Effect */}
@@ -177,11 +177,11 @@ const SustainabilitySection = () => {
                                         <div className="grid grid-cols-2 gap-8">
                                             <div className="space-y-1">
                                                 <p className="text-[10px] font-black uppercase text-white/40 tracking-widest">Efficiency</p>
-                                                <p className="text-2xl font-black text-eco tracking-tight drop-shadow-[0_0_10px_rgba(46,213,115,0.3)]">AAA+</p>
+                                                <p className="text-2xl font-black text-eco tracking-tight glow-green">AAA+</p>
                                             </div>
                                             <div className="space-y-1 text-right">
                                                 <p className="text-[10px] font-black uppercase text-white/40 tracking-widest">Reliability</p>
-                                                <p className="text-2xl font-black text-eco tracking-tight drop-shadow-[0_0_10px_rgba(46,213,115,0.3)]">99.99%</p>
+                                                <p className="text-2xl font-black text-yellow tracking-tight glow-yellow">99.99%</p>
                                             </div>
                                         </div>
 

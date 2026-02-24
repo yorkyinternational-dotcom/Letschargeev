@@ -46,7 +46,7 @@ const PartnerWithUsPage = () => {
                         <span className="label-caps !text-accent opacity-60">Strategic Alliances</span>
                         <h1 className="text-4xl md:text-8xl font-black text-white mb-8 tracking-[-0.04em] md:tracking-tighter uppercase italic leading-[0.85]">
                             BUILD THE INFRASTRUCTURE <br />
-                            <span className="text-eco">OF TOMORROW.</span>
+                            <span className="text-yellow glow-yellow">OF TOMORROW.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto font-medium leading-relaxed">
                             Lets charge EV is seeking visionary partners across India to accelerate the transition to sustainable mobility.
@@ -67,10 +67,10 @@ const PartnerWithUsPage = () => {
                                 transition={{ delay: i * 0.1 }}
                                 className="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100 transition-all group"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-eco text-white flex items-center justify-center mb-8 transition-colors">
+                                <div className="w-16 h-16 rounded-2xl bg-eco text-primary flex items-center justify-center mb-8 transition-colors group-hover:bg-yellow transition-all">
                                     <type.icon size={32} />
                                 </div>
-                                <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 uppercase italic tracking-tighter leading-none">{type.title}</h3>
+                                <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 uppercase italic tracking-tighter leading-none group-hover:text-eco transition-colors">{type.title}</h3>
                                 <p className="text-slate-500 mb-10 font-medium leading-relaxed">{type.description}</p>
                                 <ul className="space-y-4">
                                     {type.benefits.map((benefit, j) => (
@@ -92,7 +92,10 @@ const PartnerWithUsPage = () => {
                     <div className="grid lg:grid-cols-2 gap-24">
                         <div>
                             <span className="label-caps">Get in Touch</span>
-                            <h2 className="text-5xl font-black text-primary mb-10 leading-tight">BECOME A <br /><span className="text-accent italic">PARTNER.</span></h2>
+                            <h2 className="text-5xl font-black text-primary mb-10 leading-tight italic">
+                                BECOME A <br />
+                                <span className="text-gradient">PARTNER.</span>
+                            </h2>
                             <p className="text-xl text-slate-500 mb-12 font-medium leading-relaxed">
                                 Share your details and our strategic partnerships team will reach out within 24 hours with a custom proposal.
                             </p>

@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-colors whitespace-nowrap ${isSpecialPage ? 'text-accent' : 'text-primary hover:text-accent'
+              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all hover:scale-105 ${isSpecialPage ? 'text-eco glow-green' : 'text-primary hover:text-eco hover:glow-green'
                 }`}
             >
               {link.name}
@@ -85,7 +85,7 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-4xl font-black uppercase tracking-tighter ${isSpecialPage ? 'text-accent' : 'text-primary hover:text-accent'
+                  className={`text-4xl font-black uppercase tracking-tighter transition-colors ${isSpecialPage ? 'text-eco' : 'text-primary hover:text-eco'
                     }`}
                 >
                   {link.name}

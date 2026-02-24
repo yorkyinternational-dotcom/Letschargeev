@@ -8,14 +8,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0A192F', // Deep LCEv Blue
-          light: '#112240',
-          dark: '#020c1b',
+          DEFAULT: '#0A192F', // Deep LCEv Midnight Blue
+          light: '#1A2C49',
+          dark: '#050D19',
         },
         accent: {
-          DEFAULT: '#00D2FF', // Electric Cyan
+          DEFAULT: '#00D2FF', // Electric Blue
           light: '#33DBFF',
           dark: '#009BBF',
+        },
+        yellow: {
+          DEFAULT: '#FFCE00', // Electric Yellow (Logo)
+          light: '#FFDA33',
+          dark: '#CCA500',
         },
         slate: {
           50: '#F8F9FA',
@@ -30,9 +35,9 @@ export default {
           900: '#212529',
         },
         eco: {
-          DEFAULT: '#00D68F', // Emerald/Eco Green
-          light: '#33E0A5',
-          dark: '#00B377',
+          DEFAULT: '#7BFF00', // Neon Lime (Logo)
+          light: '#95FF33',
+          dark: '#62CC00',
         }
       },
       fontFamily: {

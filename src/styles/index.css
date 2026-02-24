@@ -12,6 +12,9 @@
     body {
         @apply font-sans antialiased overflow-x-hidden bg-white text-primary;
         line-height: 1.6;
+        --color-eco: #7BFF00;
+        --color-yellow: #FFCE00;
+        --color-blue: #00D2FF;
     }
 
     h1,
@@ -44,11 +47,11 @@
     }
 
     .btn-primary {
-        @apply px-12 py-5 rounded-full font-black transition-all duration-300 flex items-center justify-center gap-3 text-white uppercase tracking-[0.3em] text-[11px] bg-primary hover:bg-accent active:scale-95;
+        @apply px-12 py-5 rounded-full font-black transition-all duration-300 flex items-center justify-center gap-3 text-white uppercase tracking-[0.3em] text-[11px] bg-primary hover:bg-eco hover:text-primary active:scale-95;
     }
 
     .btn-accent {
-        @apply px-12 py-5 rounded-full font-black transition-all duration-300 flex items-center justify-center gap-3 text-primary uppercase tracking-[0.3em] text-[11px] border-2 border-primary hover:bg-primary hover:text-white active:scale-95;
+        @apply px-12 py-5 rounded-full font-black transition-all duration-300 flex items-center justify-center gap-3 text-primary uppercase tracking-[0.3em] text-[11px] border-2 border-primary hover:bg-yellow hover:border-yellow active:scale-95;
     }
 
     .glass-tile {
@@ -56,7 +59,15 @@
     }
 
     .text-gradient {
-        @apply text-accent;
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-eco to-yellow;
+    }
+
+    .glow-green {
+        text-shadow: 0 0 20px rgba(123, 255, 0, 0.4);
+    }
+
+    .glow-yellow {
+        text-shadow: 0 0 20px rgba(255, 206, 0, 0.4);
     }
 }
 

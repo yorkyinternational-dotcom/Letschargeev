@@ -26,7 +26,7 @@ const Hero = () => {
               transition={{ duration: 0.5 }}
               className="mb-8"
             >
-              <span className="label-caps tracking-[0.3em] md:tracking-[0.6em]">Smart . Tech . <span className="text-eco">Sustainable</span></span>
+              <span className="label-caps !mb-4 tracking-[0.3em] md:tracking-[0.6em] glow-yellow">Smart . Tech . <span className="text-eco">Sustainable</span></span>
             </motion.div>
 
             <motion.h1
@@ -36,7 +36,7 @@ const Hero = () => {
               className="text-6xl md:text-8xl font-black text-primary mb-10 leading-[0.85] tracking-tighter"
             >
               POWER THAT <br />
-              <span className="text-accent italic">MOVES WITH YOU.</span>
+              <span className="text-gradient italic glow-green">MOVES WITH YOU.</span>
             </motion.h1>
 
             <motion.p
@@ -97,14 +97,14 @@ const Hero = () => {
                     <motion.p
                       animate={{ opacity: [0.4, 1, 0.4] }}
                       transition={{ duration: 3, repeat: Infinity }}
-                      className="text-[10px] font-black text-accent uppercase tracking-[0.5em]"
+                      className="text-[10px] font-black text-eco uppercase tracking-[0.5em] glow-green"
                     >
                       LCEv APP
                     </motion.p>
 
                     <h3 className="text-5xl font-black text-white italic tracking-tighter leading-none">
                       COMING <br />
-                      <span className="text-accent">SOON.</span>
+                      <span className="text-yellow glow-yellow">SOON.</span>
                     </h3>
 
                     <div className="pt-8 space-y-3">
@@ -127,8 +127,8 @@ const Hero = () => {
             </div>
 
             {/* Decorative background circles */}
-            <div className="absolute -top-20 -right-20 w-80 h-80 bg-accent/5 rounded-full -z-10 blur-3xl"></div>
-            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-eco/5 rounded-full -z-10 blur-3xl"></div>
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-yellow/10 rounded-full -z-10 blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-eco/10 rounded-full -z-10 blur-3xl"></div>
           </motion.div>
         </div>
       </div>

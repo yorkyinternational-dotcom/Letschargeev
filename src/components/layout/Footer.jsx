@@ -22,8 +22,8 @@ const Footer = () => {
                 { icon: Linkedin, label: 'LI' },
                 { icon: Instagram, label: 'IG' }
               ].map((social, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-eco hover:text-black transition-all group">
-                  <social.icon size={18} className="group-hover:scale-110 transition-transform" />
+                <a key={i} href="#" className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-eco hover:text-primary transition-all group">
+                  <social.icon size={18} className="group-hover:scale-110 group-hover:glow-green transition-transform" />
                 </a>
               ))}
             </div>

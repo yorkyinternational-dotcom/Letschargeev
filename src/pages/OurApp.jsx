@@ -6,11 +6,11 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
         whileHover={{ y: -10 }}
         className="p-8 bg-primary-light/50 backdrop-blur-xl border border-white/10 rounded-3xl hover:border-accent/50 transition-all group"
     >
-        <div className="w-14 h-14 bg-accent/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors">
-            <Icon className="text-accent" size={28} />
+        <div className="w-14 h-14 bg-eco/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-eco/30 transition-colors">
+            <Icon className="text-eco glow-green" size={28} />
         </div>
-        <h3 className="text-xl font-bold mb-4 text-white">{title}</h3>
-        <p className="text-white/40 leading-relaxed font-medium">{description}</p>
+        <h3 className="text-xl font-bold mb-4 text-white uppercase italic">{title}</h3>
+        <p className="text-white/40 leading-relaxed font-medium group-hover:text-white/60 transition-colors">{description}</p>
     </motion.div>
 );
 
@@ -28,22 +28,23 @@ const OurApp = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-accent text-sm font-bold uppercase tracking-widest mb-6 inline-block">
+                            <span className="px-4 py-2 bg-eco/10 border border-eco/20 rounded-full text-eco text-sm font-bold uppercase tracking-widest mb-6 inline-block glow-green">
                                 Mobile Experience
                             </span>
-                            <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-tight">
-                                <span className="text-white"> Power in Your Pocket.</span>
+                            <h1 className="text-5xl lg:text-7xl font-black mb-8 leading-tight italic">
+                                <span className="text-white"> Power in Your </span>
+                                <span className="text-gradient">Pocket.</span>
                             </h1>
                             <p className="text-xl text-white/60 mb-10 leading-relaxed max-w-lg">
                                 Experience the future of EV charging with the Lets charge EV mobile app. Manage your charging sessions, find stations, and pay seamlessly.
                             </p>
                             <div className="flex flex-wrap gap-6">
-                                <button className="flex items-center gap-3 px-8 py-4 bg-white text-primary rounded-2xl font-bold hover:bg-slate-100 transition-all">
-                                    <Download size={20} />
+                                <button className="flex items-center gap-3 px-8 py-4 bg-white text-primary rounded-2xl font-bold hover:bg-eco transition-all group">
+                                    <Download size={20} className="group-hover:scale-110 transition-transform" />
                                     App Store
                                 </button>
-                                <button className="flex items-center gap-3 px-8 py-4 bg-accent text-white rounded-2xl font-bold hover:bg-accent/90 transition-all">
-                                    <Download size={20} />
+                                <button className="flex items-center gap-3 px-8 py-4 bg-yellow text-primary rounded-2xl font-bold hover:bg-yellow/90 transition-all group">
+                                    <Download size={20} className="group-hover:scale-110 transition-transform" />
                                     Play Store
                                 </button>
                             </div>
