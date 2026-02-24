@@ -128,7 +128,7 @@ const SolutionsSection = () => {
     ];
 
     return (
-        <section id="solutions" className="py-40 bg-[#FAFAFA] relative overflow-hidden">
+        <section id="solutions" className="py-24 md:py-40 bg-[#FAFAFA] relative overflow-hidden">
             {/* Subtle mesh background for solutions */}
             <div className="absolute inset-0 -z-10 bg-white">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#00E696 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>

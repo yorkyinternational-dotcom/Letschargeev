@@ -10,7 +10,7 @@ const StatsSection = () => {
     ];
 
     return (
-        <section className="py-40 bg-primary relative overflow-hidden">
+        <section className="py-24 md:py-40 bg-primary relative overflow-hidden">
             {/* Background Mesh Glow for Stats */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-eco/5 via-accent/5 to-yellow/5 skew-y-6"></div>
 

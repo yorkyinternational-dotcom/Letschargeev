@@ -115,7 +115,7 @@ const OurApp = () => {
             </section>
 
             {/* Features Grid */}
-            <section className="py-40 bg-slate-50 relative">
+            <section className="py-24 md:py-40 bg-slate-50 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
                         <div>
@@ -158,7 +158,7 @@ const OurApp = () => {
             </section>
 
             {/* Coming Soon Callout */}
-            <section className="py-40">
+            <section className="py-24 md:py-40">
                 <div className="max-w-5xl mx-auto px-4">
                     <div className="p-20 bg-primary rounded-[5rem] text-white relative overflow-hidden shadow-2xl shadow-primary/40 border-4 border-white/5">
                         {/* Mesh overlay */}

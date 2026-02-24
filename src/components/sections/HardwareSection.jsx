@@ -24,7 +24,7 @@ const HardwareSection = () => {
     ];
 
     return (
-        <section id="products" className="py-40 bg-white relative overflow-hidden">
+        <section id="products" className="py-24 md:py-40 bg-white relative overflow-hidden">
             {/* Background Accent */}
             <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-eco/5 rounded-full blur-[100px] -translate-x-1/2 -z-10"></div>
 

@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24 mb-32">
           <div className="lg:col-span-2">
-            <Link to="/" className="mb-12 block scale-125 origin-left">
+            <Link to="/" className="mb-12 block scale-150 origin-left">
               <Logo withText={true} />
             </Link>
             <p className="text-white/30 text-xl max-w-sm mb-12 font-black italic uppercase tracking-tighter leading-none">

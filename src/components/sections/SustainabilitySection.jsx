@@ -32,7 +32,7 @@ const SustainabilitySection = () => {
     ];
 
     return (
-        <section id="sustainability" className="relative min-h-screen flex items-center bg-white overflow-hidden py-40">
+        <section id="sustainability" className="relative min-h-screen flex items-center bg-white overflow-hidden py-24 md:py-40">
             {/* Vibrant Mesh Background Glows */}
             <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
                 <motion.div

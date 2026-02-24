@@ -10,7 +10,7 @@ const SavingsCalculator = () => {
     const monthlySavings = monthlyFuelCost - monthlyEvCost;
 
     return (
-        <section id="calculator" className="py-40 bg-white overflow-hidden relative">
+        <section id="calculator" className="py-24 md:py-40 bg-white overflow-hidden relative">
             {/* Background Kinetic Glow */}
             <div className="absolute top-0 right-0 w-full h-full overflow-hidden -z-10">
                 <div className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] bg-yellow/5 rounded-full blur-[120px]"></div>

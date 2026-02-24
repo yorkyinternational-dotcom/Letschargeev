@@ -26,7 +26,7 @@ const chargers = [
 
 const MapSection = () => {
     return (
-        <section id="locate" className="py-40 bg-white relative overflow-hidden">
+        <section id="locate" className="py-24 md:py-40 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
                     <div>
