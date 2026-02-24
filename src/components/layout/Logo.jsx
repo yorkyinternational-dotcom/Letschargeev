@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import logoProfessional from '../../assets/images/logo_professional.png';
 
 const Logo = ({ className = "h-8 md:h-10", withText = true }) => {
