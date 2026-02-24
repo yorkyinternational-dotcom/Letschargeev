@@ -30,20 +30,22 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-8'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative">
+    <nav className={`fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 ${scrolled ? 'py-3' : 'py-5'}`}>
+      <div className={`w-full h-full absolute inset-0 -z-10 rounded-[2rem] border border-white/20 transition-all duration-500 ${scrolled ? 'bg-primary/80 backdrop-blur-2xl shadow-2xl' : 'bg-white/10 backdrop-blur-xl'}`}></div>
+
+      <div className="px-6 sm:px-10 flex justify-between items-center relative">
         {/* Logo - Left Aligned */}
         <Link to="/" className="flex items-center shrink-0">
-          <Logo className={scrolled ? "h-8 md:h-10" : "h-10 md:h-12"} withText={false} />
+          <Logo className={scrolled ? "h-6 md:h-8" : "h-8 md:h-10"} withText={false} />
         </Link>
 
         {/* Desktop Navigation - Centered */}
-        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
+        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-10">
           {allLinks.filter(l => l.name !== 'Home').map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`text-[11px] font-black uppercase tracking-[0.4em] transition-all hover:scale-105 ${isSpecialPage ? 'text-eco glow-green' : 'text-primary hover:text-eco hover:glow-green'
+              className={`text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:text-eco hover:scale-110 active:scale-95 ${scrolled ? 'text-white' : 'text-primary'
                 }`}
             >
               {link.name}
@@ -55,9 +57,9 @@ const Navbar = () => {
         <div className="flex items-center gap-6">
           <Link
             to="/partner-with-us"
-            className={`hidden lg:block ${isSpecialPage && location.pathname === '/partner-with-us' ? 'bg-accent text-white' : 'btn-primary'} !px-8 !py-3 !text-[10px] !tracking-[0.4em] rounded-[1rem] font-black transition-all`}
+            className={`hidden lg:block btn-primary !px-8 !py-3 !rounded-2xl !tracking-[0.2em] !text-[10px]`}
           >
-            PARTNER
+            JOIN US
           </Link>
 
           {/* Mobile Menu Toggle */}
@@ -74,30 +76,38 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 lg:hidden bg-white px-6 pt-32"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="fixed inset-0 z-40 lg:hidden bg-primary px-6 pt-32 h-screen w-screen"
           >
-            <div className="flex flex-col gap-8">
+            {/* Mobile mesh background */}
+            <div className="absolute inset-0 -z-10 overflow-hidden">
+              <div className="absolute top-1/4 -right-1/4 w-80 h-80 bg-eco/20 rounded-full blur-[80px]"></div>
+              <div className="absolute bottom-1/4 -left-1/4 w-80 h-80 bg-accent/20 rounded-full blur-[80px]"></div>
+            </div>
+
+            <div className="flex flex-col gap-6 relative z-10">
               {allLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`text-4xl font-black uppercase tracking-tighter transition-colors ${isSpecialPage ? 'text-eco' : 'text-primary hover:text-eco'
-                    }`}
+                  className="text-5xl font-black uppercase tracking-tighter text-white hover:text-eco transition-all flex items-center justify-between group"
                 >
                   {link.name}
+                  <ChevronRight className="w-8 h-8 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-eco" />
                 </Link>
               ))}
-              <Link
-                to="/partner-with-us"
-                onClick={() => setIsOpen(false)}
-                className="btn-primary w-full py-6 text-sm"
-              >
-                PARTNER WITH US
-              </Link>
+              <div className="mt-10">
+                <Link
+                  to="/partner-with-us"
+                  onClick={() => setIsOpen(false)}
+                  className="btn-primary w-full py-8 text-sm"
+                >
+                  PARTNER WITH US
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

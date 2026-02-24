@@ -39,26 +39,26 @@ const LegalPage = () => {
     const sections = content[type] || [{ h2: "Information", p: "Detailed information for this section will be available soon." }];
 
     return (
-        <div className="pt-32 pb-24 min-h-screen bg-white">
+        <div className="pt-32 pb-24 min-h-screen bg-slate-50">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12">
-                    <h1 className="text-5xl font-black text-primary mb-4">{title}</h1>
-                    <div className="h-2 w-24 bg-accent rounded-full"></div>
+                    <h1 className="text-4xl md:text-6xl font-black text-primary mb-4 italic uppercase tracking-tighter">{title}</h1>
+                    <div className="h-1.5 w-24 bg-eco rounded-full"></div>
                 </div>
 
                 <div className="prose prose-slate max-w-none">
-                    <p className="text-lg text-slate-500 mb-12 font-medium italic">
-                        Last updated: February 21, 2026
+                    <p className="text-lg text-slate-500 mb-12 font-bold italic uppercase tracking-widest text-[10px]">
+                        Last updated: February 24, 2026
                     </p>
 
                     <div className="space-y-12">
                         {sections.map((section, index) => (
                             <section key={index} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                                <h2 className="text-2xl font-black text-primary mb-4 flex items-center gap-3">
-                                    <span className="text-accent">#</span>
+                                <h2 className="text-xl font-extrabold text-primary mb-4 flex items-center gap-3 italic uppercase tracking-tight">
+                                    <span className="text-eco">#</span>
                                     {section.h2}
                                 </h2>
-                                <p className="text-lg text-slate-600 leading-relaxed font-medium">
+                                <p className="text-lg text-slate-500 leading-relaxed font-medium">
                                     {section.p}
                                 </p>
                             </section>

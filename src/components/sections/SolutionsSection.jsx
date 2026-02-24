@@ -33,7 +33,7 @@ const SolutionModal = ({ solution, isOpen, onClose }) => {
 
                         <div className="grid lg:grid-cols-2">
                             <div className="p-12 lg:p-20 bg-slate-50">
-                                <span className="text-accent font-black tracking-widest text-sm uppercase mb-6 block">Solution Profile</span>
+                                <span className="text-eco font-bold tracking-widest text-[10px] uppercase mb-6 block italic">Solution Profile</span>
                                 <h2 className="text-3xl md:text-5xl font-black text-primary mb-8 leading-tight uppercase italic">{solution.title}</h2>
                                 <p className="text-xl text-slate-500 leading-relaxed mb-12 font-medium">{solution.fullDescription}</p>
 
@@ -128,37 +128,52 @@ const SolutionsSection = () => {
     ];
 
     return (
-        <section id="solutions" className="py-40 bg-white">
+        <section id="solutions" className="py-40 bg-[#FAFAFA] relative overflow-hidden">
+            {/* Subtle mesh background for solutions */}
+            <div className="absolute inset-0 -z-10 bg-white">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#00E696 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px] translate-x-1/4 -translate-y-1/4"></div>
+            </div>
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-24">
-                    <span className="label-caps">Integrated Solutions</span>
-                    <h2 className="max-w-4xl">SCALABLE <br /><span className="text-accent italic uppercase">ECOSYSTEM.</span></h2>
+                    <span className="label-caps !text-accent !mb-6">Integrated Solutions</span>
+                    <h2 className="max-w-4xl text-primary font-black text-6xl md:text-8xl uppercase italic tracking-tighter leading-[0.8]">
+                        SCALABLE <br />
+                        <span className="text-gradient">ECOSYSTEM.</span>
+                    </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                     {solutions.map((solution, idx) => (
                         <motion.div
                             key={idx}
-                            whileHover={{ y: -15 }}
+                            whileHover={{ y: -15, scale: 1.02 }}
                             onClick={() => setSelectedSolution(solution)}
-                            className="group p-12 bg-slate-50 rounded-[3rem] border border-transparent hover:border-eco/30 transition-all cursor-pointer relative overflow-hidden h-[500px] flex flex-col justify-between"
+                            className="group p-14 bg-white rounded-[3.5rem] border border-slate-100 hover:border-eco/40 hover:shadow-2xl hover:shadow-eco/10 transition-all cursor-pointer relative overflow-hidden min-h-[550px] flex flex-col justify-between"
                         >
                             <div className="relative z-10">
-                                <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-10 group-hover:bg-eco group-hover:text-white transition-all duration-500">
-                                    <solution.icon size={32} />
+                                <div className="w-20 h-20 rounded-3xl bg-primary text-white shadow-xl flex items-center justify-center mb-12 group-hover:bg-eco group-hover:scale-110 transition-all duration-500">
+                                    <solution.icon size={36} />
                                 </div>
-                                <span className="text-accent font-black italic mb-6 block tracking-widest text-sm">{solution.id}</span>
-                                <h3 className="text-4xl font-black mb-8 leading-tight uppercase italic">{solution.title}</h3>
-                                <p className="text-slate-500 font-medium leading-[1.8] text-lg">{solution.description}</p>
+                                <span className="text-eco font-black italic mb-8 block tracking-[0.4em] text-xs">ID_{solution.id}</span>
+                                <h3 className="text-4xl font-black mb-8 leading-none uppercase italic text-primary group-hover:text-eco transition-colors">
+                                    {solution.title.split(' ').map((word, i) => (
+                                        <span key={i}>{word} <br /></span>
+                                    ))}
+                                </h3>
+                                <p className="text-slate-400 font-bold leading-tight text-lg uppercase tracking-tight">{solution.description}</p>
                             </div>
 
-                            <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] group-hover:text-eco transition-colors">
-                                LEARN TECHNICAL DETAILS
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                            <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] group-hover:text-eco transition-all">
+                                VIEW TECHNICAL SPEC
+                                <div className="w-12 h-1 bg-slate-100 group-hover:bg-eco group-hover:w-20 transition-all"></div>
                             </div>
 
-                            {/* Background Texture/Accent */}
-                            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-eco/5 rounded-full blur-3xl group-hover:bg-eco/10 transition-colors"></div>
+                            {/* Decorative Background Symbol */}
+                            <div className="absolute -bottom-10 -right-10 text-[12rem] font-black italic opacity-[0.02] text-primary rotate-12 group-hover:opacity-[0.05] transition-opacity">
+                                SYST
+                            </div>
                         </motion.div>
                     ))}
                 </div>

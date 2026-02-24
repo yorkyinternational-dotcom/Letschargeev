@@ -8,36 +8,28 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0A192F', // Deep LCEv Midnight Blue
-          light: '#1A2C49',
-          dark: '#050D19',
+          DEFAULT: '#020617', // Deep Techno Midnight
+          light: '#0F172A',
+          dark: '#000000',
         },
         accent: {
-          DEFAULT: '#00D2FF', // Electric Blue
-          light: '#33DBFF',
-          dark: '#009BBF',
+          DEFAULT: '#00D1FF', // Electric Cyan
+          light: '#70E1FF',
+          dark: '#0097B8',
         },
         yellow: {
-          DEFAULT: '#FFCE00', // Electric Yellow (Logo)
-          light: '#FFDA33',
+          DEFAULT: '#FFCE00', // Kinetic Yellow (Logo Match)
+          light: '#FFD700',
           dark: '#CCA500',
         },
-        slate: {
-          50: '#F8F9FA',
-          100: '#F1F3F5',
-          200: '#E9ECEF',
-          300: '#DEE2E6',
-          400: '#CED4DA',
-          500: '#ADB5BD',
-          600: '#868E96',
-          700: '#495057',
-          800: '#343A40',
-          900: '#212529',
-        },
         eco: {
-          DEFAULT: '#7BFF00', // Neon Lime (Logo)
-          light: '#95FF33',
-          dark: '#62CC00',
+          DEFAULT: '#00E696', // Neon Pulse Green (Logo Match)
+          light: '#33FFB0',
+          dark: '#00B374',
+        },
+        violet: {
+          DEFAULT: '#7C3AED',
+          glow: '#A78BFA',
         }
       },
       fontFamily: {
@@ -51,6 +43,8 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 4s ease-in-out infinite',
         'blob': 'blob 7s infinite',
+        'spin-slow': 'spin 12s linear infinite',
+        'mesh': 'mesh 15s ease infinite',
       },
       keyframes: {
         fadeIn: {
@@ -75,6 +69,10 @@ export default {
           '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
           '100%': { transform: 'translate(0px, 0px) scale(1)' },
         },
+        mesh: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        }
       },
       backdropBlur: {
         xs: '2px',
