@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import logoProfessional from '../../assets/images/logo_professional.png';
 
-const Logo = ({ className = "h-8 md:h-10", withText = true }) => {
+const Logo = ({ className = "h-10 md:h-16", withText = true }) => {
     return (
         <div className="flex items-center gap-4 bg-transparent py-1">
             <motion.div

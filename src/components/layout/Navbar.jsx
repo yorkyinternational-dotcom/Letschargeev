@@ -43,7 +43,7 @@ const Navbar = () => {
 
         {/* Logo - Center on Mobile, Left on Desktop */}
         <Link to="/" className="flex items-center shrink-0 lg:absolute lg:left-10 lg:translate-x-0 left-1/2 -translate-x-1/2 absolute lg:static">
-          <Logo className={scrolled ? "h-6 md:h-8" : "h-8 md:h-10"} withText={false} />
+          <Logo className={scrolled ? "h-8 md:h-10" : "h-12 md:h-16"} withText={false} />
         </Link>
 
         {/* Desktop Navigation - Centered */}
