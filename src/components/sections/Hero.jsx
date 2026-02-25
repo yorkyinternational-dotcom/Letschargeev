@@ -1,163 +1,118 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Zap, ExternalLink, ArrowRight, MousePointer2, Smartphone } from 'lucide-react';
+import { Zap, Smartphone } from 'lucide-react';
 
 const Hero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.3
-      }
-    }
-  };
-
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-white">
-      {/* Dynamic Mesh Background Glows */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 bg-white">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 50, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-eco/15 rounded-full blur-[120px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            x: [0, -40, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-[10%] -right-[5%] w-[60%] h-[60%] bg-accent/15 rounded-full blur-[100px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [0, 90, 0],
-          }}
-          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-yellow/10 rounded-full blur-[80px]"
-        />
+    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-primary-surface dark:bg-primary transition-colors duration-300">
+      {/* Minimalist Background Accents */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent-green/5 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-accent-yellow/5 blur-[100px] rounded-full"></div>
+        {/* Tech Grid Overlay */}
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div>
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-8"
-            >
-              <span className="label-caps !text-eco !mb-0 glow-green">THE ELECTRIC NEW ERA</span>
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="label-caps !text-accent-green">Charging the Future, Today</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-primary-light dark:text-white mb-8 leading-[1.1] tracking-tight">
+              Smart EV <br />
+              Charging <br />
+              <span className="text-accent-green">Ecosystem.</span>
+            </h1>
+            <p className="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-lg leading-relaxed font-medium">
+              Join India's most reliable and intelligent charging network.
+              Seamless integration for residential, commercial, and fleet management.
+            </p>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-7xl md:text-9xl font-black text-primary mb-10 leading-[0.8] tracking-tighter"
-            >
-              FAST. <br />
-              VIBRANT. <br />
-              <span className="text-gradient italic">UNSTOPPABLE.</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-slate-500 mb-16 max-w-xl font-bold leading-tight"
-            >
-              Join India's most high-energy EV ecosystem. <br className="hidden md:block" />
-              Built for the bold, power for the future.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-6 items-center"
-            >
-              <a href="#products" className="btn-primary w-full sm:w-auto flex items-center justify-center">
-                START CHARGING
-                <Zap className="w-5 h-5 ml-2 fill-primary" />
+            <div className="flex flex-col sm:flex-row gap-5 items-center">
+              <a href="#quote" className="btn-professional-primary w-full sm:w-auto">
+                Get a Free Quote
+                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-              <a href="#solutions" className="btn-accent w-full sm:w-auto flex items-center justify-center">
-                VIEW SOLUTIONS
+              <a href="#products" className="btn-professional border-slate-200 dark:border-white/10 border text-slate-800 dark:text-white w-full sm:w-auto hover:bg-slate-50 dark:hover:bg-white/5">
+                View Hardware
               </a>
-            </motion.div>
-          </div>
+            </div>
+
+            {/* Social Proof / Stats Minor */}
+            <div className="mt-16 pt-8 border-t border-slate-200 dark:border-white/10 flex items-center gap-10">
+              <div>
+                <p className="text-2xl font-black text-primary-light dark:text-white leading-none mb-1">500+</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Live points</p>
+              </div>
+              <div className="w-px h-8 bg-slate-200 dark:border-white/10"></div>
+              <div>
+                <p className="text-2xl font-black text-primary-light dark:text-white leading-none mb-1">99.9%</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Uptime</p>
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative hidden lg:block"
+            className="relative"
           >
-            {/* Phone Frame - High Impact GenZ Style */}
-            <div className="relative mx-auto w-[340px] h-[680px] bg-primary rounded-[3.5rem] p-4 shadow-[0_0_100px_rgba(0,230,150,0.2)] border-4 border-slate-900/50">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-900 rounded-b-3xl z-20"></div>
-              <div className="w-full h-full bg-[#050B18] rounded-[3rem] overflow-hidden relative flex flex-col items-center justify-center p-8 border border-white/5">
+            {/* Hardware Showcase Placeholder (Statiq/Exicom style) */}
+            <div className="relative aspect-square w-full max-w-xl mx-auto rounded-3xl overflow-hidden bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-2xl group">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-green/10 via-transparent to-accent-yellow/10"></div>
 
-                {/* Floating Glow Inside Phone */}
-                <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-40 h-40 bg-eco/20 rounded-full blur-[50px] animate-pulse"></div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="relative z-10 text-center"
-                >
-                  <div className="w-20 h-20 bg-eco rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-eco/50 rotate-12">
-                    <Zap className="w-10 h-10 text-primary fill-primary" />
-                  </div>
-
-                  <h3 className="text-4xl font-black text-white italic tracking-tighter mb-4 leading-none">
-                    LCEv <br />
-                    <span className="text-eco glow-green">APP</span>
-                  </h3>
-
-                  <div className="mt-12 space-y-4">
-                    <div className="h-12 w-48 bg-white/5 rounded-2xl border border-white/10 flex items-center px-4 gap-3">
-                      <div className="w-2 h-2 rounded-full bg-eco animate-ping"></div>
-                      <div className="h-2 w-24 bg-white/20 rounded-full"></div>
+              {/* Visual Placeholder for 3D Render */}
+              <div className="absolute inset-0 flex items-center justify-center p-12">
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <motion.div
+                    animate={{ y: [0, -15, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative z-10 w-48 h-80 bg-slate-800 rounded-2xl border-4 border-slate-700 shadow-[0_0_50px_rgba(0,230,150,0.2)] flex flex-col items-center justify-between p-6 overflow-hidden"
+                  >
+                    <div className="w-full h-1 bg-accent-green animate-pulse rounded-full"></div>
+                    <div className="w-20 h-20 rounded-full border-4 border-accent-green flex items-center justify-center">
+                      <div className="w-12 h-12 bg-accent-green/20 rounded-full animate-ping"></div>
+                      <Zap className="w-8 h-8 text-accent-green absolute" />
                     </div>
-                    <div className="h-12 w-48 bg-white/5 rounded-2xl border border-white/10 flex items-center px-4 gap-3">
-                      <div className="w-2 h-2 rounded-full bg-yellow animate-ping"></div>
-                      <div className="h-2 w-20 bg-white/20 rounded-full"></div>
+                    <div className="w-full space-y-2">
+                      <div className="w-full h-2 bg-slate-700 rounded"></div>
+                      <div className="w-2/3 h-2 bg-slate-700 rounded"></div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <p className="mt-10 text-[10px] font-black tracking-[0.4em] text-slate-500 uppercase">
-                    GEN-Z READY
-                  </p>
-                </motion.div>
+                  {/* Orbiting Elements */}
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="absolute inset-0 rounded-full border border-dashed border-slate-200 dark:border-white/10 m-10"
+                  ></motion.div>
+                  <div className="absolute top-0 right-1/4 w-12 h-12 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/10 shadow-lg flex items-center justify-center">
+                    <Smartphone size={20} className="text-accent-green" />
+                  </div>
+                </div>
               </div>
 
-              {/* Decorative Floating Symbols around the phone */}
-              <motion.div
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-10 -right-10 w-24 h-24 bg-yellow rounded-full flex items-center justify-center shadow-2xl shadow-yellow/40 z-30"
-              >
-                <Zap className="w-12 h-12 text-primary" />
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 20, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute top-40 -left-12 w-16 h-16 bg-accent rounded-2xl flex items-center justify-center shadow-2xl shadow-accent/40 z-30 -rotate-12"
-              >
-                <Smartphone className="w-8 h-8 text-white" />
-              </motion.div>
+              {/* Technical Specs Overlay */}
+              <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
+                <div className="bg-primary/90 dark:bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                  <p className="text-[10px] font-bold text-accent-green uppercase mb-1">Model: LCEV-X1</p>
+                  <p className="text-white font-black text-sm uppercase">22KW FAST CHARGER</p>
+                </div>
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 rounded-full bg-accent-green"></div>
+                  <div className="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+                  <div className="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+                </div>
+              </div>
             </div>
+
+            {/* Floating Decorative Elements */}
+            <div className="absolute -top-10 -left-10 w-24 h-24 bg-accent-yellow rounded-full blur-3xl opacity-30"></div>
+            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-accent-green rounded-full blur-3xl opacity-20"></div>
           </motion.div>
         </div>
       </div>
@@ -165,8 +120,7 @@ const Hero = () => {
   );
 };
 
-// Internal missing component
-const ChevronRight = ({ size, className }) => (
+const ArrowRight = ({ size, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -179,7 +133,7 @@ const ChevronRight = ({ size, className }) => (
     strokeLinejoin="round"
     className={className}
   >
-    <path d="m9 18 6-6-6-6" />
+    <path d="M5 12h14M12 5l7 7-7 7" />
   </svg>
 );
 

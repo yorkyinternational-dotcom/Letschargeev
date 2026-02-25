@@ -3,14 +3,17 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-40 bg-white relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="contact" className="py-24 md:py-40 bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
+            {/* Tech Grid Overlay */}
+            <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
                     <div>
-                        <span className="label-caps !text-eco glow-green !mb-6">Join the Shift</span>
-                        <h2 className="text-primary font-black text-6xl md:text-8xl uppercase italic tracking-tighter leading-[0.8] mb-16">
-                            LET'S CHARGE <br />
-                            <span className="text-gradient">THE FUTURE.</span>
+                        <span className="label-caps !text-accent-green !mb-6">Join the Shift</span>
+                        <h2 className="text-primary-light dark:text-white font-black text-6xl md:text-8xl uppercase tracking-tighter leading-[0.9] mb-16">
+                            INITIATE <br />
+                            <span className="text-accent-green">PARTNERSHIP.</span>
                         </h2>
 
                         <div className="space-y-12">
@@ -25,47 +28,40 @@ const Contact = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ delay: i * 0.1 }}
                                 >
-                                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-slate-300 mb-4 italic">/ {item.label}</p>
-                                    <p className="text-3xl font-black text-primary italic uppercase tracking-tighter leading-none hover:text-eco transition-colors cursor-pointer">{item.value}</p>
+                                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4">/ {item.label}</p>
+                                    <p className="text-3xl font-black text-primary-light dark:text-white uppercase tracking-tighter leading-none hover:text-accent-green transition-colors cursor-pointer">{item.value}</p>
                                 </motion.div>
                             ))}
                         </div>
                     </div>
 
                     <div className="relative">
-                        {/* Decorative background for form */}
-                        <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/5 rounded-full blur-3xl -z-10"></div>
-
-                        <div className="bg-white p-14 lg:p-16 rounded-[4rem] border-4 border-slate-50 shadow-2xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 p-8">
-                                <Send className="text-eco/20 w-12 h-12 rotate-12" />
-                            </div>
-
+                        <div className="bg-white dark:bg-white/5 p-12 md:p-16 rounded-[2.5rem] border border-slate-200 dark:border-white/10 shadow-2xl relative overflow-hidden backdrop-blur-xl">
                             <form className="space-y-8 relative z-10">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 italic ml-4">YOUR NAME</label>
-                                        <input type="text" placeholder="REQUIRED" className="w-full bg-slate-50/50 border-2 border-transparent p-7 rounded-[2rem] font-black text-xs tracking-widest outline-none focus:border-eco focus:bg-white transition-all uppercase" />
+                                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">YOUR NAME</label>
+                                        <input type="text" placeholder="REQUIRED" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 rounded-2xl font-bold text-xs tracking-widest outline-none focus:border-accent-green transition-all dark:text-white uppercase" />
                                     </div>
                                     <div className="space-y-3">
-                                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 italic ml-4">YOUR EMAIL</label>
-                                        <input type="email" placeholder="ACTIVE_ONLY" className="w-full bg-slate-50/50 border-2 border-transparent p-7 rounded-[2rem] font-black text-xs tracking-widest outline-none focus:border-eco focus:bg-white transition-all uppercase" />
+                                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">YOUR EMAIL</label>
+                                        <input type="email" placeholder="ACTIVE_ONLY" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 rounded-2xl font-bold text-xs tracking-widest outline-none focus:border-accent-green transition-all dark:text-white uppercase" />
                                     </div>
                                 </div>
                                 <div className="space-y-3">
-                                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 italic ml-4">SELECT TRACK</label>
-                                    <select className="w-full bg-slate-50/50 border-2 border-transparent p-7 rounded-[2rem] font-black text-xs tracking-widest outline-none focus:border-eco focus:bg-white appearance-none transition-all uppercase cursor-pointer">
+                                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">SELECT TRACK</label>
+                                    <select className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 rounded-2xl font-bold text-xs tracking-widest outline-none focus:border-accent-green appearance-none transition-all dark:text-white uppercase cursor-pointer">
                                         <option>HARDWARE INQUIRY</option>
                                         <option>NETWORK PARTNER</option>
                                         <option>FLEET SOLUTIONS</option>
                                     </select>
                                 </div>
                                 <div className="space-y-3">
-                                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 italic ml-4">MESSAGE_CONTENT</label>
-                                    <textarea rows="4" placeholder="HOW CAN WE ACCELERATE YOU?" className="w-full bg-slate-50/50 border-2 border-transparent p-7 rounded-[2rem] font-black text-xs tracking-widest outline-none focus:border-eco focus:bg-white resize-none transition-all uppercase"></textarea>
+                                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">MESSAGE_CONTENT</label>
+                                    <textarea rows="4" placeholder="HOW CAN WE ACCELERATE YOU?" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 rounded-2xl font-bold text-xs tracking-widest outline-none focus:border-accent-green resize-none transition-all dark:text-white uppercase"></textarea>
                                 </div>
-                                <button className="btn-primary w-full !rounded-[2.5rem] !py-8 font-black tracking-[0.3em] text-sm shadow-xl shadow-primary/20">
-                                    INITIATE_CONTACT
+                                <button className="btn-professional-primary w-full !py-6 font-black tracking-widest text-xs uppercase shadow-xl transition-all">
+                                    Initiate Contact
                                 </button>
                             </form>
                         </div>

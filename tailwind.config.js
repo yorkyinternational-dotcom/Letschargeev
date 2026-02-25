@@ -4,37 +4,36 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#020617', // Deep Techno Midnight
-          light: '#0F172A',
-          dark: '#000000',
+          DEFAULT: '#121212', // Deep Charcoal (Dark Theme Base)
+          light: '#1F2937',   // Graphite Grey (Light Theme Text)
+          surface: '#F9FAFB', // Soft White (Light Theme Base)
         },
         accent: {
-          DEFAULT: '#00D1FF', // Electric Cyan
-          light: '#70E1FF',
-          dark: '#0097B8',
+          green: '#00E696',   // Logo Eco Green
+          yellow: '#FFCE00',  // Logo Energy Yellow
         },
-        yellow: {
-          DEFAULT: '#FFCE00', // Kinetic Yellow (Logo Match)
-          light: '#FFD700',
-          dark: '#CCA500',
-        },
-        eco: {
-          DEFAULT: '#00E696', // Neon Pulse Green (Logo Match)
-          light: '#33FFB0',
-          dark: '#00B374',
-        },
-        violet: {
-          DEFAULT: '#7C3AED',
-          glow: '#A78BFA',
+        slate: {
+          50: '#F9FAFB',
+          100: '#F3F4F6',
+          200: '#E5E7EB',
+          300: '#D1D5DB',
+          400: '#9CA3AF',
+          500: '#6B7280',
+          600: '#4B5563',
+          700: '#374151',
+          800: '#1F2937',
+          900: '#111827',
+          950: '#030712',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Poppins', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Montserrat', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',

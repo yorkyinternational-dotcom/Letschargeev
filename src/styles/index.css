@@ -11,7 +11,7 @@
     }
 
     body {
-        @apply font-sans antialiased overflow-x-hidden bg-white text-primary;
+        @apply font-sans antialiased overflow-x-hidden bg-primary-surface dark:bg-primary text-primary-light transition-colors duration-500;
         line-height: 1.6;
     }
 
@@ -21,7 +21,7 @@
     h4,
     h5,
     h6 {
-        @apply font-sans tracking-tight leading-[1.1] font-extrabold text-primary uppercase italic;
+        @apply font-display tracking-tight leading-[1] font-black text-primary-light dark:text-white uppercase;
     }
 
     h1 {
@@ -34,76 +34,59 @@
 }
 
 @layer components {
-    /* LCEv Minimalist Components */
+    /* LCEv Professional Components */
 
-    .card-modern {
-        @apply p-8 rounded-[3.5rem] bg-white/70 backdrop-blur-xl border border-white/20 transition-all duration-500 shadow-xl;
+    .card-professional {
+        @apply p-8 rounded-3xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 transition-all duration-500 shadow-sm;
     }
 
-    .card-modern:hover {
-        @apply border-eco shadow-2xl shadow-eco/20 -translate-y-2;
+    .card-professional:hover {
+        @apply border-accent-green/40 shadow-2xl shadow-accent-green/5 -translate-y-1;
     }
 
-    .btn-primary {
-        @apply px-12 py-6 rounded-2xl font-black transition-all duration-500 flex items-center justify-center gap-3 text-primary uppercase tracking-[0.2em] text-[11px] bg-eco hover:bg-yellow hover:scale-105 active:scale-95 shadow-xl shadow-eco/30;
+    .btn-professional-primary {
+        @apply px-10 py-5 rounded-2xl font-black transition-all duration-500 flex items-center justify-center gap-3 text-primary-light uppercase tracking-widest text-[11px] bg-accent-green hover:bg-accent-yellow hover:scale-105 active:scale-95 shadow-lg shadow-accent-green/20;
     }
 
-    .btn-accent {
-        @apply px-12 py-6 rounded-2xl font-black transition-all duration-500 flex items-center justify-center gap-3 text-white uppercase tracking-[0.2em] text-[11px] bg-primary border border-white/10 hover:bg-slate-900 hover:scale-105 active:scale-95;
+    .btn-professional {
+        @apply px-10 py-5 rounded-2xl font-black transition-all duration-500 flex items-center justify-center gap-3 text-primary-light dark:text-white uppercase tracking-widest text-[11px] bg-transparent border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-white/5 hover:scale-105 active:scale-95;
     }
 
-    .glass-tile {
-        @apply bg-slate-50 border border-slate-200 p-8 rounded-[1.5rem] transition-all;
+    .label-caps {
+        @apply text-[10px] font-black uppercase tracking-[0.4em] text-accent-green mb-6 block;
+    }
+
+    .text-technical {
+        @apply font-mono text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500;
     }
 
     .text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-eco via-accent to-yellow;
-        background-size: 200% 200%;
-        animation: mesh 5s ease infinite;
-    }
-
-    .glow-green {
-        text-shadow: 0 0 20px rgba(0, 230, 150, 0.6);
-    }
-
-    .glow-yellow {
-        text-shadow: 0 0 20px rgba(255, 206, 0, 0.6);
-    }
-
-    .mesh-gradient {
-        background: radial-gradient(at 0% 0%, rgba(0, 230, 150, 0.15) 0px, transparent 50%),
-            radial-gradient(at 100% 0%, rgba(0, 209, 255, 0.15) 0px, transparent 50%),
-            radial-gradient(at 100% 100%, rgba(255, 206, 0, 0.15) 0px, transparent 50%),
-            radial-gradient(at 0% 100%, rgba(124, 58, 237, 0.1) 0px, transparent 50%);
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-yellow;
     }
 }
 
-/* Minimal Scrollbar */
+/* Minimalist Technical Scrollbar */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 3px;
 }
 
 ::-webkit-scrollbar-track {
-    background: white;
+    @apply bg-transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-slate-200 rounded-full;
+    @apply bg-slate-200 dark:bg-white/10 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-400;
+    @apply bg-accent-green;
 }
 
 p {
-    @apply text-slate-600 font-medium;
-}
-
-.label-caps {
-    @apply text-[10px] font-bold uppercase tracking-[0.4em] text-eco mb-4 block italic;
+    @apply text-slate-500 dark:text-slate-400 font-medium;
 }
 
 .outline-text {
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
     color: transparent;
 }

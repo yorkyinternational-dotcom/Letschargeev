@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Building2, Globe, Truck, CheckCircle2, ArrowRight, MessageSquare, Send } from 'lucide-react';
-
 const PartnerWithUsPage = () => {
     const [formState, setFormState] = useState('idle'); // idle, sending, success
 
@@ -33,49 +29,53 @@ const PartnerWithUsPage = () => {
     };
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="bg-primary-surface dark:bg-primary min-h-screen transition-colors duration-300">
             {/* Hero Section */}
-            <section className="relative pt-40 pb-24 overflow-hidden bg-primary overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80')] opacity-10 bg-cover bg-center"></div>
+            <section className="relative pt-48 pb-24 overflow-hidden bg-primary dark:bg-black overflow-hidden border-b border-white/5">
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80')] opacity-5 bg-cover bg-center grayscale"></div>
+                {/* Tech Grid Overlay */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(white 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="label-caps !text-accent opacity-60">Strategic Alliances</span>
-                        <h1 className="text-4xl md:text-8xl font-black text-white mb-8 tracking-[-0.04em] md:tracking-tighter uppercase italic leading-[0.85]">
+                        <span className="label-caps !text-accent-green !mb-8 block">Strategic Alliances</span>
+                        <h1 className="text-4xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]">
                             BUILD THE INFRASTRUCTURE <br />
-                            <span className="text-eco">OF TOMORROW.</span>
+                            <span className="text-accent-green">OF TOMORROW.</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto font-medium leading-relaxed">
-                            Lets charge EV is seeking visionary partners across India to accelerate the transition to sustainable mobility.
+                        <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed uppercase tracking-tight">
+                            LCEv is seeking visionary partners to accelerate the transition to sustainable mobility through technical authority.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
             {/* Partnership Categories */}
-            <section className="py-32 bg-slate-50">
+            <section className="py-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-3 gap-12">
+                    <div className="grid lg:grid-cols-3 gap-10">
                         {partnershipTypes.map((type, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="bg-white p-12 rounded-[3rem] shadow-sm border border-slate-100 transition-all group"
+                                className="card-professional !p-12 bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 group hover:border-accent-green/40 transition-all"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-eco/10 text-eco flex items-center justify-center mb-8 transition-colors group-hover:bg-eco group-hover:text-white transition-all">
-                                    <type.icon size={32} />
+                                <div className="w-16 h-16 rounded-2xl bg-accent-green/10 text-accent-green flex items-center justify-center mb-10 group-hover:bg-accent-green group-hover:text-primary transition-all duration-500">
+                                    <type.icon size={28} />
                                 </div>
-                                <h3 className="text-3xl md:text-4xl font-black text-primary mb-6 uppercase italic tracking-tighter leading-none group-hover:text-eco transition-colors">{type.title}</h3>
-                                <p className="text-slate-500 mb-10 font-medium leading-relaxed">{type.description}</p>
+                                <h3 className="text-3xl font-black text-primary-light dark:text-white mb-6 uppercase tracking-tighter leading-none group-hover:text-accent-green transition-colors">{type.title}</h3>
+                                <p className="text-slate-500 dark:text-slate-400 mb-10 font-medium leading-relaxed">{type.description}</p>
                                 <ul className="space-y-4">
                                     {type.benefits.map((benefit, j) => (
-                                        <li key={j} className="flex items-center gap-3 text-sm font-black text-primary uppercase tracking-widest">
-                                            <CheckCircle2 size={16} className="text-eco" />
+                                        <li key={j} className="flex items-center gap-3 text-[10px] font-black text-primary-light dark:text-white uppercase tracking-widest">
+                                            <CheckCircle2 size={14} className="text-accent-green" />
                                             {benefit}
                                         </li>
                                     ))}
@@ -87,42 +87,42 @@ const PartnerWithUsPage = () => {
             </section>
 
             {/* Contact Form Section */}
-            <section className="py-32 border-t border-slate-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="py-32 border-t border-slate-200 dark:border-white/10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-24">
                         <div>
-                            <span className="label-caps">Get in Touch</span>
-                            <h2 className="text-5xl font-black text-primary mb-10 leading-tight italic">
+                            <span className="label-caps !text-accent-green !mb-8">Get in Touch</span>
+                            <h2 className="text-6xl md:text-7xl font-black text-primary-light dark:text-white mb-12 tracking-tighter uppercase leading-[0.9]">
                                 BECOME A <br />
-                                <span className="text-gradient">PARTNER.</span>
+                                <span className="text-accent-green">PARTNER.</span>
                             </h2>
-                            <p className="text-xl text-slate-500 mb-12 font-medium leading-relaxed">
-                                Share your details and our strategic partnerships team will reach out within 24 hours with a custom proposal.
+                            <p className="text-xl text-slate-500 dark:text-slate-400 mb-16 font-medium leading-relaxed">
+                                Share your details and our strategic partnerships team will reach out with a technical deployment blueprint.
                             </p>
 
-                            <div className="space-y-8">
-                                <div className="flex gap-6 items-start">
-                                    <div className="p-4 bg-slate-100 rounded-2xl text-primary">
+                            <div className="space-y-10">
+                                <div className="flex gap-6 items-start group">
+                                    <div className="p-5 bg-slate-100 dark:bg-white/5 rounded-2xl text-primary-light dark:text-white group-hover:bg-accent-green group-hover:text-primary transition-all">
                                         <MessageSquare size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-1">Direct Line</p>
-                                        <p className="text-lg font-black text-primary">+91-9999265790</p>
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">Direct Line</p>
+                                        <p className="text-xl font-black text-primary-light dark:text-white uppercase tracking-tight">+91-99992 65790</p>
                                     </div>
                                 </div>
-                                <div className="flex gap-6 items-start">
-                                    <div className="p-4 bg-slate-100 rounded-2xl text-primary">
+                                <div className="flex gap-6 items-start group">
+                                    <div className="p-5 bg-slate-100 dark:bg-white/5 rounded-2xl text-primary-light dark:text-white group-hover:bg-accent-green group-hover:text-primary transition-all">
                                         <Send size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-1">Inquiry Email</p>
-                                        <p className="text-lg font-black text-primary">support@lcev.in</p>
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">Inquiry Email</p>
+                                        <p className="text-xl font-black text-primary-light dark:text-white uppercase tracking-tight">hello@lcev.in</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="bg-slate-50 p-12 lg:p-16 rounded-[4rem] border border-slate-100 relative overflow-hidden">
+                        <div className="bg-white dark:bg-white/5 p-12 md:p-16 rounded-[2.5rem] border border-slate-200 dark:border-white/10 relative overflow-hidden shadow-2xl backdrop-blur-xl">
                             <AnimatePresence mode="wait">
                                 {formState === 'success' ? (
                                     <motion.div
@@ -131,14 +131,14 @@ const PartnerWithUsPage = () => {
                                         animate={{ opacity: 1, scale: 1 }}
                                         className="text-center py-20"
                                     >
-                                        <div className="w-20 h-20 bg-eco rounded-full flex items-center justify-center mx-auto mb-8 text-white">
+                                        <div className="w-20 h-20 bg-accent-green rounded-full flex items-center justify-center mx-auto mb-8 text-primary">
                                             <CheckCircle2 size={40} />
                                         </div>
-                                        <h3 className="text-3xl font-black text-primary mb-4">INQUIRY RECEIVED</h3>
-                                        <p className="text-slate-500 font-medium">Our team is already reviewing your profile.</p>
+                                        <h3 className="text-3xl font-black text-primary-light dark:text-white mb-4 uppercase tracking-tighter">INQUIRY RECEIVED</h3>
+                                        <p className="text-slate-500 dark:text-slate-400 font-medium">Our team is already reviewing your profile.</p>
                                         <button
                                             onClick={() => setFormState('idle')}
-                                            className="mt-10 text-accent font-black text-xs uppercase tracking-widest border-b-2 border-accent pb-1"
+                                            className="mt-10 btn-professional border border-slate-200 dark:border-white/10 text-primary-light dark:text-white"
                                         >
                                             Send another inquiry
                                         </button>
@@ -147,53 +147,53 @@ const PartnerWithUsPage = () => {
                                     <motion.form
                                         key="form"
                                         onSubmit={handleSubmit}
-                                        className="space-y-6"
+                                        className="space-y-8"
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
                                     >
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Full Name</label>
-                                                <input required type="text" className="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 focus:border-accent outline-none font-bold text-primary transition-all" placeholder="Arjun Sharma" />
+                                        <div className="grid md:grid-cols-2 gap-8">
+                                            <div className="space-y-3">
+                                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Full Name</label>
+                                                <input required type="text" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="ARJUN SHARMA" />
                                             </div>
-                                            <div className="space-y-2">
-                                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Organization</label>
-                                                <input required type="text" className="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 focus:border-accent outline-none font-bold text-primary transition-all" placeholder="Company Name" />
+                                            <div className="space-y-3">
+                                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Organization</label>
+                                                <input required type="text" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="COMPANY NAME" />
                                             </div>
                                         </div>
-                                        <div className="space-y-2">
-                                            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Professional Email</label>
-                                            <input required type="email" className="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 focus:border-accent outline-none font-bold text-primary transition-all" placeholder="arjun@enterprise.in" />
+                                        <div className="space-y-3">
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Professional Email</label>
+                                            <input required type="email" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="BUSINESS_ONLY" />
                                         </div>
-                                        <div className="space-y-2">
-                                            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Partnership Interest</label>
-                                            <select required className="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 focus:border-accent outline-none font-bold text-primary transition-all appearance-none cursor-pointer">
+                                        <div className="space-y-3">
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Partnership Interest</label>
+                                            <select required className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all appearance-none cursor-pointer">
                                                 <option>Real Estate / Site Host</option>
                                                 <option>Fleet Transition</option>
                                                 <option>Network CPO Franchise</option>
                                                 <option>Equipment Supply</option>
                                             </select>
                                         </div>
-                                        <div className="space-y-2">
-                                            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-4">Project Brief</label>
-                                            <textarea required rows="4" className="w-full bg-white border border-slate-200 rounded-2xl px-6 py-4 focus:border-accent outline-none font-bold text-primary transition-all resize-none" placeholder="Tell us about your mission..."></textarea>
+                                        <div className="space-y-3">
+                                            <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Project Brief</label>
+                                            <textarea required rows="4" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all resize-none" placeholder="How can we accelerate your mission?"></textarea>
                                         </div>
                                         <button
                                             disabled={formState === 'sending'}
                                             type="submit"
-                                            className="btn-primary w-full !py-6 !rounded-2xl flex items-center justify-center gap-4 group"
+                                            className="btn-professional-primary w-full !py-6 flex items-center justify-center gap-4 group uppercase tracking-widest font-black text-xs"
                                         >
                                             {formState === 'sending' ? (
                                                 <motion.div
                                                     animate={{ rotate: 360 }}
                                                     transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
-                                                    className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
+                                                    className="w-5 h-5 border-2 border-primary/30 border-t-primary rounded-full"
                                                 />
                                             ) : (
                                                 <>
-                                                    SUBMIT PARTNERSHIP INQUIRY
-                                                    <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                                                    Submit inquiry
+                                                    <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
                                                 </>
                                             )}
                                         </button>

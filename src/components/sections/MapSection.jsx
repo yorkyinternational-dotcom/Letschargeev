@@ -26,26 +26,27 @@ const chargers = [
 
 const MapSection = () => {
     return (
-        <section id="locate" className="py-24 md:py-40 bg-white relative overflow-hidden">
+        <section id="locate" className="py-24 md:py-40 bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
+            {/* Tech Background */}
+            <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
                     <div>
-                        <span className="label-caps !text-eco glow-green !mb-6">Network Locator</span>
-                        <h2 className="max-w-3xl text-primary font-black text-6xl md:text-8xl uppercase italic tracking-tighter leading-[0.8]">
-                            FIND THE <br />
-                            <span className="text-gradient">NEAREST HUB.</span>
+                        <span className="label-caps !text-accent-green !mb-6">Network Locator</span>
+                        <h2 className="max-w-3xl text-primary-light dark:text-white font-black text-6xl md:text-8xl uppercase tracking-tighter leading-[0.9]">
+                            UBIQUITOUS <br />
+                            <span className="text-accent-green">GRID.</span>
                         </h2>
                     </div>
-                    <p className="text-xl text-slate-400 font-black tracking-tighter uppercase italic md:max-w-xs leading-none">
-                        Live Tracking. <br />
-                        Smart Sync. <br />
-                        <span className="text-primary italic">Precision Grid.</span>
+                    <p className="text-lg text-slate-500 dark:text-slate-400 font-medium md:max-w-xs leading-relaxed">
+                        Live Tracking. Smart Sync.
+                        India's most technically advanced charging locator.
                     </p>
                 </div>
 
-                <div className="h-[500px] md:h-[700px] w-full rounded-[4rem] overflow-hidden border-4 border-slate-50 shadow-2xl relative">
-                    <div className="absolute inset-0 bg-primary/10 z-10 pointer-events-none"></div>
-                    <MapContainer center={[28.5355, 77.3910]} zoom={10} scrollWheelZoom={false} className="h-full w-full grayscale contrast-125">
+                <div className="h-[500px] md:h-[700px] w-full rounded-[2.5rem] overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl relative">
+                    <MapContainer center={[28.5355, 77.3910]} zoom={11} scrollWheelZoom={false} className="h-full w-full grayscale contrast-[1.1] hover:grayscale-0 transition-all duration-700">
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -53,14 +54,14 @@ const MapSection = () => {
                         {chargers.map(charger => (
                             <Marker key={charger.id} position={[charger.lat, charger.lng]}>
                                 <Popup>
-                                    <div className="p-6 min-w-[220px] bg-white">
-                                        <p className="text-[10px] font-black uppercase tracking-[0.3em] text-eco mb-4 italic">SMART_POINT_{charger.id}</p>
-                                        <h3 className="font-black text-primary text-3xl mb-4 italic tracking-tighter uppercase leading-none">{charger.name}</h3>
-                                        <div className="flex items-center gap-3 mb-6">
-                                            <div className={`w-3 h-3 rounded-full glow-green ${charger.status === 'Available' ? 'bg-eco pulse' : 'bg-red-500'}`}></div>
-                                            <span className="text-[10px] font-black uppercase tracking-widest text-primary italic">{charger.status}</span>
+                                    <div className="p-4 min-w-[240px] bg-white dark:bg-slate-900">
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-accent-green mb-2">SMART_POINT_{charger.id}</p>
+                                        <h3 className="font-black text-slate-900 dark:text-white text-xl mb-4 uppercase tracking-tight">{charger.name}</h3>
+                                        <div className="flex items-center gap-2 mb-6 border-l-2 border-accent-green pl-3">
+                                            <div className={`w-2 h-2 rounded-full ${charger.status === 'Available' ? 'bg-accent-green animate-pulse' : 'bg-red-500'}`}></div>
+                                            <span className="text-[10px] font-bold uppercase text-slate-500 dark:text-slate-400">{charger.status}</span>
                                         </div>
-                                        <button className="btn-primary w-full !py-4 !text-[10px] !rounded-xl uppercase">OPEN NAVIGATION</button>
+                                        <button className="btn-professional-primary w-full !py-3 !text-[10px] uppercase">Navigate Now</button>
                                     </div>
                                 </Popup>
                             </Marker>

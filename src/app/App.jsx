@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
@@ -11,11 +12,26 @@ import OurApp from '../pages/OurApp'
 import ScrollToTop from '../components/layout/ScrollToTop'
 
 function App() {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
+
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
+      <div className={`flex flex-col min-h-screen transition-colors duration-300 ${theme === 'dark' ? 'dark bg-primary text-white' : 'bg-primary-surface text-primary-light'}`}>
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
         <main className="flex-grow pb-24 lg:pb-0">
           <Routes>
             <Route path="/" element={<Home />} />
