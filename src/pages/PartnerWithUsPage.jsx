@@ -62,9 +62,9 @@ const PartnerWithUsPage = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="label-caps !mb-8 block">Strategic Alliances</span>
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase leading-[1.1] md:leading-[0.9] w-full">
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase leading-[1.1] md:leading-[0.9] w-full">
                             BUILD THE <br className="block md:hidden" />
-                            <span className="Tracking-tight">INFRASTRUCTURE</span> <br className="hidden md:block" />
+                            <span className="tracking-tight">INFRASTRUCTURE</span> <br className="hidden md:block" />
                             <span className="text-accent-green block mt-2 md:inline md:mt-0"> OF TOMORROW.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed uppercase tracking-tight">
