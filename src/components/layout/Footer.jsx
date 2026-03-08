@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary dark:bg-black text-white pt-16 md:pt-32 pb-24 lg:pb-16 border-t border-white/5 relative overflow-hidden transition-colors duration-500">
+    <footer className="bg-primary dark:bg-black text-white pt-16 md:pt-24 pb-24 lg:pb-16 border-t border-white/5 relative overflow-hidden transition-colors duration-500">
       {/* Precision Grid Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -37,11 +37,11 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green mb-10">/ NAVIGATION</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-8">NAVIGATION</p>
             <ul className="space-y-6">
               {['Products', 'Solutions', 'Software', 'Support'].map(link => (
                 <li key={link}>
-                  <Link to={`/#${link.toLowerCase()}`} className="text-white/40 hover:text-white text-lg font-bold tracking-tight transition-all hover:translate-x-3 block uppercase">
+                  <Link to={`/#${link.toLowerCase()}`} className="text-white/40 hover:text-white text-sm font-medium tracking-wide transition-all hover:translate-x-3 block py-2">
                     {link}
                   </Link>
                 </li>
@@ -50,11 +50,11 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-yellow mb-10">/ LEGAL</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-8">LEGAL</p>
             <ul className="space-y-6">
               {['Privacy', 'Technical', 'Compliance', 'Ethics'].map(link => (
                 <li key={link}>
-                  <Link to={`/legal`} className="text-white/40 hover:text-white text-lg font-bold tracking-tight transition-all hover:translate-x-3 block uppercase">
+                  <Link to={`/legal`} className="text-white/40 hover:text-white text-sm font-medium tracking-wide transition-all hover:translate-x-3 block py-2">
                     {link}
                   </Link>
                 </li>
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-3">
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green mb-10">/ TECHNICAL SUPPORT</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-8">TECHNICAL SUPPORT</p>
             <div className="space-y-8">
               <a
                 href="https://wa.me/919650979197?text=Hello%20I%20am%20interested%20in%20your%20services"
