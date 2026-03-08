@@ -1,119 +1,127 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Smartphone } from 'lucide-react';
+import heroVideo from '../../assets/videos/hero_video1.mp4';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-primary-surface dark:bg-primary transition-colors duration-300">
-      {/* Minimalist Background Accents */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent-green/5 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-accent-yellow/5 blur-[100px] rounded-full"></div>
-        {/* Tech Grid Overlay */}
-        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+    <section id="home" className="relative min-h-[95vh] flex items-center pt-20 pb-12 overflow-hidden bg-white dark:bg-black transition-colors duration-500">
+      {/* Dynamic Background Video Container */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover opacity-20 dark:opacity-40 grayscale contrast-[1.2]"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-white via-white/80 to-transparent dark:from-black dark:via-black/80 dark:to-transparent"></div>
+
+        {/* Precision Grid Overlay */}
+        <div className="absolute inset-0 w-full h-full opacity-[0.05] dark:opacity-[0.1]"
+          style={{
+            backgroundImage: `linear-gradient(#2D2D2D 1px, transparent 1px), linear-gradient(90deg, #2D2D2D 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}>
+        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full mt-10 md:mt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7"
           >
-            <span className="label-caps !text-accent-green">Charging the Future, Today</span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-primary-light dark:text-white mb-8 leading-[1.1] tracking-tight">
-              Smart EV <br />
-              Charging <br />
-              <span className="text-accent-green">Ecosystem.</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 border border-accent-green/20 mb-8">
+              <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green">Infrastructure of Modern Mobility</span>
+            </div>
+
+            <h1 className="text-4xl md:text-8xl lg:text-9xl font-black text-primary-light dark:text-white mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter uppercase">
+              ARCHITECTING <br className="hidden md:block" />
+              <span className="text-accent-green">ZERO EMISSION.</span>
             </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-lg leading-relaxed font-medium">
-              Join India's most reliable and intelligent charging network.
-              Seamless integration for residential, commercial, and fleet management.
+
+            <p className="text-lg md:text-2xl text-slate-500 dark:text-slate-400 mb-10 md:mb-16 max-w-2xl font-medium leading-tight uppercase tracking-tight">
+              Industrial-grade EV charging solutions for corporate headquarters and mission-critical commercial hubs.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-5 items-center">
-              <a href="#quote" className="btn-professional-primary w-full sm:w-auto">
-                Get a Free Quote
-                <ArrowRight className="w-5 h-5 ml-2" />
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6 items-center">
+              <a href="#partner-with-us" className="btn-professional-primary w-full sm:w-auto !py-4 md:!py-6 !px-8 md:!px-12 !text-[10px] md:!text-[12px] shadow-2xl shadow-accent-green/40">
+                PRO VISION SOLUTIONS
+                <ArrowRight size={18} className="ml-3" />
               </a>
-              <a href="#products" className="btn-professional border-slate-200 dark:border-white/10 border text-slate-800 dark:text-white w-full sm:w-auto hover:bg-slate-50 dark:hover:bg-white/5">
-                View Hardware
+
+              <a href="#hardware" className="btn-professional w-full sm:w-auto !py-4 md:!py-6 !px-8 md:!px-12 !text-[10px] md:!text-[12px] border-slate-300 dark:border-white/10">
+                ENGINEERING SPECS
               </a>
             </div>
 
-            {/* Social Proof / Stats Minor */}
-            <div className="mt-16 pt-8 border-t border-slate-200 dark:border-white/10 flex items-center gap-10">
-              <div>
-                <p className="text-2xl font-black text-primary-light dark:text-white leading-none mb-1">500+</p>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Live points</p>
+            {/* Technical Labels */}
+            <div className="mt-24 flex flex-wrap gap-16 border-t border-slate-200 dark:border-white/10 pt-12">
+              <div className="group/metric">
+                <span className="block text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] mb-4 group-hover/metric:text-accent-green transition-colors">System Standard</span>
+                <span className="text-2xl font-black dark:text-white tracking-tighter uppercase">OCPP 2.0.1+</span>
               </div>
-              <div className="w-px h-8 bg-slate-200 dark:border-white/10"></div>
-              <div>
-                <p className="text-2xl font-black text-primary-light dark:text-white leading-none mb-1">99.9%</p>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Uptime</p>
+              <div className="group/metric">
+                <span className="block text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] mb-4 group-hover/metric:text-accent-green transition-colors">Protection</span>
+                <span className="text-2xl font-black dark:text-white tracking-tighter uppercase">IP65 / IK10</span>
+              </div>
+              <div className="group/metric">
+                <span className="block text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] mb-4 group-hover/metric:text-accent-green transition-colors">Max Output</span>
+                <span className="text-2xl font-black dark:text-white tracking-tighter uppercase">180kW DC</span>
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative"
+            initial={{ opacity: 0, scale: 0.9, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 relative"
           >
-            {/* Hardware Showcase Placeholder (Statiq/Exicom style) */}
-            <div className="relative aspect-square w-full max-w-xl mx-auto rounded-3xl overflow-hidden bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-2xl group">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-green/10 via-transparent to-accent-yellow/10"></div>
+            <div className="relative group">
+              {/* Product Video / Visual - "The Hero Center" */}
+              <div className="relative aspect-[4/5] w-full max-w-md mx-auto rounded-[3rem] overflow-hidden shadow-[0_60px_120px_-30px_rgba(0,0,0,0.6)] dark:shadow-[0_60px_120px_-30px_rgba(34,197,94,0.15)] border border-white/10 bg-[#0A0A0A]">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[2000ms] opacity-80"
+                >
+                  <source src={heroVideo} type="video/mp4" />
+                </video>
 
-              {/* Visual Placeholder for 3D Render */}
-              <div className="absolute inset-0 flex items-center justify-center p-12">
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <motion.div
-                    animate={{ y: [0, -15, 0] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                    className="relative z-10 w-48 h-80 bg-slate-800 rounded-2xl border-4 border-slate-700 shadow-[0_0_50px_rgba(0,230,150,0.2)] flex flex-col items-center justify-between p-6 overflow-hidden"
-                  >
-                    <div className="w-full h-1 bg-accent-green animate-pulse rounded-full"></div>
-                    <div className="w-20 h-20 rounded-full border-4 border-accent-green flex items-center justify-center">
-                      <div className="w-12 h-12 bg-accent-green/20 rounded-full animate-ping"></div>
-                      <Zap className="w-8 h-8 text-accent-green absolute" />
-                    </div>
-                    <div className="w-full space-y-2">
-                      <div className="w-full h-2 bg-slate-700 rounded"></div>
-                      <div className="w-2/3 h-2 bg-slate-700 rounded"></div>
-                    </div>
-                  </motion.div>
+                {/* Technical Overlay Graphics */}
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,transparent_0%,rgba(0,0,0,0.4)_100%)]"></div>
 
-                  {/* Orbiting Elements */}
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute inset-0 rounded-full border border-dashed border-slate-200 dark:border-white/10 m-10"
-                  ></motion.div>
-                  <div className="absolute top-0 right-1/4 w-12 h-12 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-white/10 shadow-lg flex items-center justify-center">
-                    <Smartphone size={20} className="text-accent-green" />
+                <div className="absolute bottom-12 left-12 right-12">
+                  <div className="flex items-end justify-between">
+                    <div>
+                      <span className="text-[10px] font-black text-accent-green uppercase tracking-[0.4em] mb-4 block">Fleet Standard</span>
+                      <p className="text-4xl font-black text-white tracking-widest">D180X</p>
+                    </div>
+                    <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white backdrop-blur-xl">
+                      <ArrowRight size={20} />
+                    </div>
                   </div>
                 </div>
+
+                {/* Grid Scanline Effect */}
+                <div className="absolute inset-0 w-full h-full opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '100% 4px' }}></div>
               </div>
 
-              {/* Technical Specs Overlay */}
-              <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
-                <div className="bg-primary/90 dark:bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/10">
-                  <p className="text-[10px] font-bold text-accent-green uppercase mb-1">Model: LCEV-X1</p>
-                  <p className="text-white font-black text-sm uppercase">22KW FAST CHARGER</p>
-                </div>
-                <div className="flex gap-2">
-                  <div className="w-2 h-2 rounded-full bg-accent-green"></div>
-                  <div className="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700"></div>
-                  <div className="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-700"></div>
-                </div>
-              </div>
+              {/* Backglow logic */}
+              <div className="absolute -inset-10 bg-accent-green/10 blur-[120px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -z-10"></div>
             </div>
-
-            {/* Floating Decorative Elements */}
-            <div className="absolute -top-10 -left-10 w-24 h-24 bg-accent-yellow rounded-full blur-3xl opacity-30"></div>
-            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-accent-green rounded-full blur-3xl opacity-20"></div>
           </motion.div>
+
         </div>
       </div>
     </section>

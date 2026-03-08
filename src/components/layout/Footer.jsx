@@ -7,41 +7,41 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary dark:bg-black text-white pt-32 pb-16 border-t border-white/5 relative overflow-hidden transition-colors duration-300">
-      {/* Tech Grid Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-      <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent-green/5 blur-[120px] rounded-full"></div>
+    <footer className="bg-primary dark:bg-black text-white pt-32 pb-32 lg:pb-16 border-t border-white/5 relative overflow-hidden transition-colors duration-500">
+      {/* Precision Grid Overlay */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`,
+          backgroundSize: '80px 80px'
+        }}>
+      </div>
+      <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent-green/5 blur-[150px] rounded-full"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-24">
-          <div className="lg:col-span-2">
-            <Link bto="/" className="mb-10 block">
-              <Logo withText={true} theme="dark" />
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-20 mb-24">
+          <div className="lg:col-span-5">
+            <Link to="/" className="mb-12 block">
+              <Logo withText={false} theme="dark" className="h-16 md:h-20" />
             </Link>
-            <p className="text-white/40 text-lg max-w-sm mb-10 leading-relaxed font-medium">
+            <p className="text-white/40 text-xl max-w-md mb-12 leading-relaxed font-medium">
               Architecting the resilient infrastructure for India's zero-emission future.
-              Technical authority in smart EV charging ecosystems.
+              Technical authority in industrial-grade EV charging ecosystems.
             </p>
-            <div className="flex gap-4">
-              {[
-                { icon: Facebook, label: 'FB' },
-                { icon: Twitter, label: 'TW' },
-                { icon: Linkedin, label: 'LI' },
-                { icon: Instagram, label: 'IG' }
-              ].map((social, i) => (
-                <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-accent-green hover:text-primary transition-all group border border-white/5 hover:border-accent-green">
-                  <social.icon size={20} className="group-hover:scale-110 transition-transform" />
+            <div className="flex gap-6">
+              {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
+                <a key={i} href="#" className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-accent-green hover:text-primary transition-all group border border-white/10">
+                  <Icon size={22} />
                 </a>
               ))}
             </div>
           </div>
 
-          <div>
-            <p className="text-[10px] font-black uppercase tracking-widest text-accent-green mb-10">/ SITE_MAP</p>
-            <ul className="space-y-4">
-              {['Solutions', 'Hardware', 'Savings', 'Contact'].map(link => (
+          <div className="lg:col-span-2">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green mb-10">/ NAVIGATION</p>
+            <ul className="space-y-6">
+              {['Products', 'Solutions', 'Software', 'Support'].map(link => (
                 <li key={link}>
-                  <Link to={`/#${link.toLowerCase()}`} className="text-white/50 hover:text-white text-lg font-bold tracking-tight transition-all hover:translate-x-2 block">
+                  <Link to={`/#${link.toLowerCase()}`} className="text-white/40 hover:text-white text-lg font-bold tracking-tight transition-all hover:translate-x-3 block uppercase">
                     {link}
                   </Link>
                 </li>
@@ -49,26 +49,35 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <p className="text-[10px] font-black uppercase tracking-widest text-accent-yellow mb-10">/ CONNECT</p>
-            <div className="space-y-6">
-              <p className="text-3xl font-black text-white leading-none hover:text-accent-green transition-colors cursor-pointer tracking-tighter uppercase">+91 99992 65790</p>
-              <p className="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em]">hello@lcev.in</p>
-            </div>
+          <div className="lg:col-span-2">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-yellow mb-10">/ LEGAL</p>
+            <ul className="space-y-6">
+              {['Privacy', 'Technical', 'Compliance', 'Ethics'].map(link => (
+                <li key={link}>
+                  <Link to={`/legal`} className="text-white/40 hover:text-white text-lg font-bold tracking-tight transition-all hover:translate-x-3 block uppercase">
+                    {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
 
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-px bg-accent-green"></div>
-            <p className="text-[10px] font-bold text-white/20 uppercase tracking-[0.2em]">
-              © {currentYear} LCEV SYSTEMS. ALL RIGHTS RESERVED.
-            </p>
-          </div>
-          <div className="flex gap-8 text-[10px] font-bold text-white/20 uppercase tracking-[0.2em]">
-            <span className="hover:text-white transition-colors cursor-pointer">PRIVACY</span>
-            <span className="hover:text-white transition-colors cursor-pointer">TERMS</span>
-            <span className="hover:text-white transition-colors cursor-pointer">SYSTEM STATUS</span>
+          <div className="lg:col-span-3">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green mb-10">/ TECHNICAL SUPPORT</p>
+            <div className="space-y-8">
+              <a
+                href="https://wa.me/919650979197?text=Hello%20I%20am%20interested%20in%20your%20services"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-4xl font-bold text-white leading-none hover:text-accent-green transition-colors cursor-pointer tracking-tight"
+              >
+                +91 96509 79197
+              </a>
+              <p className="text-white/40 text-xs font-bold uppercase tracking-[0.2em]">support.core@lcev.in</p>
+              <div className="pt-6 border-t border-white/5">
+                <p className="text-[10px] font-bold text-white/20 uppercase tracking-[0.4em]">Available 24/7/365 via WhatsApp</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

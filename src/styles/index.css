@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -8,11 +8,23 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         -webkit-tap-highlight-color: transparent;
+        overflow-x: hidden;
     }
 
     body {
-        @apply font-sans antialiased overflow-x-hidden bg-primary-surface dark:bg-primary text-primary-light transition-colors duration-500;
+        @apply font-sans antialiased overflow-x-hidden bg-primary-surface dark:bg-primary text-primary-light transition-colors duration-500 min-h-screen selection:bg-accent-green selection:text-primary;
+        /* Mobile App web UI constraints */
+        -webkit-user-select: none;
+        user-select: none;
+        overscroll-behavior-y: none;
+        -webkit-touch-callout: none;
+        /* Fluid body text: 16px to 18px */
+        font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem);
         line-height: 1.6;
+    }
+
+    .max-w-7xl {
+        @apply px-4 sm:px-6 lg:px-12;
     }
 
     h1,
@@ -21,15 +33,36 @@
     h4,
     h5,
     h6 {
-        @apply font-display tracking-tight leading-[1] font-black text-primary-light dark:text-white uppercase;
+        @apply font-sans tracking-tight font-bold text-primary-light dark:text-white;
     }
 
-    h1 {
-        @apply text-6xl md:text-8xl;
+    /* Fluid Typography System */
+    h1,
+    .fluid-h1 {
+        /* Scales from ~40px to ~112px */
+        font-size: clamp(2.5rem, 6vw + 1.5rem, 7rem) !important;
+        line-height: clamp(0.9, 1vw + 0.5, 1.1) !important;
     }
 
-    h2 {
-        @apply text-4xl md:text-7xl;
+    h2,
+    .fluid-h2 {
+        /* Scales from ~32px to ~72px */
+        font-size: clamp(2rem, 5vw + 1rem, 4.5rem) !important;
+        line-height: clamp(1, 1vw + 0.8, 1.1) !important;
+    }
+
+    h3,
+    .fluid-h3 {
+        /* Scales from ~24px to ~48px */
+        font-size: clamp(1.5rem, 4vw + 0.75rem, 3rem) !important;
+        line-height: 1.2 !important;
+    }
+
+    p {
+        /* Fluid paragraph scaling */
+        font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem) !important;
+        line-height: 1.6 !important;
+        @apply text-slate-500 dark:text-slate-400 font-medium tracking-tight;
     }
 }
 
@@ -63,6 +96,44 @@
     .text-gradient {
         @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-green to-accent-yellow;
     }
+
+    .glass-panel {
+        @apply bg-white/70 dark:bg-white/5 backdrop-blur-2xl border border-white/10 dark:border-white/5 shadow-2xl;
+    }
+
+    .glass-morphic {
+        @apply bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-white/20 dark:border-white/10 shadow-2xl;
+    }
+
+    .tech-glow {
+        position: relative;
+    }
+
+    .tech-glow::after {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        background: linear-gradient(45deg, transparent, var(--accent-green), transparent);
+        border-radius: inherit;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .tech-glow:hover::after {
+        opacity: 0.3;
+        animation: glow-pulse 2s linear infinite;
+    }
+
+    @keyframes glow-pulse {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
 }
 
 /* Minimalist Technical Scrollbar */
@@ -82,9 +153,7 @@
     @apply bg-accent-green;
 }
 
-p {
-    @apply text-slate-500 dark:text-slate-400 font-medium;
-}
+
 
 .outline-text {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);

@@ -1,3 +1,7 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Gamepad2 } from 'lucide-react';
+
 const Game = () => {
     return (
         <div className="pt-32 pb-24 min-h-screen bg-primary dark:bg-black text-white flex items-center justify-center relative overflow-hidden">

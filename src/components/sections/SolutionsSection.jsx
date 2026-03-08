@@ -133,40 +133,42 @@ const SolutionsSection = () => {
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="mb-24">
-                    <span className="label-caps !text-accent-green !mb-6">Integrated Solutions</span>
-                    <h2 className="max-w-4xl text-primary-light dark:text-white font-black text-6xl md:text-8xl uppercase tracking-tighter leading-[0.9]">
-                        SCALABLE <br />
-                        <span className="text-accent-green">ECOSYSTEM.</span>
+                <div className="mb-32">
+                    <span className="label-caps !text-accent-green !mb-8">Technical Ecosystem</span>
+                    <h2 className="max-w-5xl text-primary-light dark:text-white font-black text-6xl md:text-9xl uppercase tracking-[1] leading-[0.8]">
+                        MODULAR <br />
+                        <span className="text-accent-green">SOLUTIONS.</span>
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {solutions.map((solution, idx) => (
                         <motion.div
                             key={idx}
-                            whileHover={{ y: -10 }}
+                            whileHover={{ y: -20 }}
                             onClick={() => setSelectedSolution(solution)}
-                            className="group p-12 bg-white dark:bg-white/5 rounded-[2.5rem] border border-slate-200 dark:border-white/10 hover:border-accent-green transition-all cursor-pointer relative overflow-hidden min-h-[500px] flex flex-col justify-between shadow-xl"
+                            className="group p-12 glass-panel rounded-[3rem] hover:border-accent-green/40 transition-all duration-700 cursor-pointer relative overflow-hidden min-h-[550px] flex flex-col justify-between shadow-2xl tech-glow"
                         >
                             <div className="relative z-10">
-                                <div className="w-16 h-16 rounded-2xl bg-primary text-white shadow-xl flex items-center justify-center mb-10 group-hover:bg-accent-green group-hover:text-primary transition-all duration-500">
-                                    <solution.icon size={28} />
+                                <div className="w-20 h-20 rounded-2xl bg-white/5 text-primary-light dark:text-white flex items-center justify-center mb-12 group-hover:bg-accent-green group-hover:text-primary transition-all duration-500 border border-white/10 relative overflow-hidden">
+                                    {/* Radar Sweep Animation */}
+                                    <div className="absolute inset-0 bg-accent-green/20 scale-0 group-hover:scale-150 rounded-full transition-transform duration-1000 opacity-0 group-hover:opacity-100 animate-ping"></div>
+                                    <solution.icon size={32} strokeWidth={1.5} className="relative z-10" />
                                 </div>
-                                <span className="text-accent-green font-black mb-6 block tracking-widest text-[10px]">ID_{solution.id}</span>
-                                <h3 className="text-4xl font-black mb-6 leading-none uppercase text-primary-light dark:text-white group-hover:text-accent-green transition-colors tracking-tighter">
+                                <span className="text-accent-green font-black mb-8 block tracking-[0.4em] text-[10px]">NETWORK_NODE / {solution.id}</span>
+                                <h3 className="text-4xl md:text-5xl font-black mb-8 leading-none uppercase text-primary-light dark:text-white group-hover:text-accent-green transition-colors tracking-tighter italic">
                                     {solution.title}
                                 </h3>
-                                <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed uppercase tracking-tight text-sm">{solution.description}</p>
+                                <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed uppercase tracking-tight text-xs border-l-2 border-accent-green/20 pl-6">{solution.description}</p>
                             </div>
 
-                            <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest group-hover:text-accent-green transition-all">
-                                View Technical Spec
-                                <div className="w-8 h-px bg-slate-300 dark:bg-white/20 group-hover:bg-accent-green transition-all"></div>
+                            <div className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.3em] group-hover:text-accent-green transition-all pt-12">
+                                <span className="opacity-40">RETRIEVE_ENGINEERING_DATA</span>
+                                <div className="w-12 h-px bg-slate-300 dark:bg-white/20 group-hover:bg-accent-green group-hover:w-20 transition-all duration-500"></div>
                             </div>
 
-                            {/* Technical Watermark */}
-                            <div className="absolute -bottom-6 -right-6 text-7xl font-black opacity-[0.02] dark:opacity-[0.05] text-primary dark:text-white select-none">
+                            {/* Architectural Grid Watermark */}
+                            <div className="absolute -bottom-10 -right-10 text-[10rem] font-black opacity-[0.02] dark:opacity-[0.03] text-primary dark:text-white select-none italic">
                                 {solution.id}
                             </div>
                         </motion.div>

@@ -1,3 +1,8 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Building2, Globe, Truck, CheckCircle2, MessageSquare, Send, ArrowRight } from 'lucide-react';
+import heroVideo from '../assets/videos/hero_video1.mp4';
+
 const PartnerWithUsPage = () => {
     const [formState, setFormState] = useState('idle'); // idle, sending, success
 
@@ -31,10 +36,24 @@ const PartnerWithUsPage = () => {
     return (
         <div className="bg-primary-surface dark:bg-primary min-h-screen transition-colors duration-300">
             {/* Hero Section */}
-            <section className="relative pt-48 pb-24 overflow-hidden bg-primary dark:bg-black overflow-hidden border-b border-white/5">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80')] opacity-5 bg-cover bg-center grayscale"></div>
+            <section className="relative pt-48 pb-24 overflow-hidden bg-black border-b border-white/5">
+                {/* Background Video */}
+                <div className="absolute inset-0 z-0">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-30 grayscale"
+                    >
+                        <source src={heroVideo} type="video/mp4" />
+                    </video>
+                    {/* Premium Overlays */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black z-10"></div>
+                </div>
+
                 {/* Tech Grid Overlay */}
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(white 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-20" style={{ backgroundImage: 'radial-gradient(white 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <motion.div
@@ -107,7 +126,14 @@ const PartnerWithUsPage = () => {
                                     </div>
                                     <div>
                                         <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">Direct Line</p>
-                                        <p className="text-xl font-black text-primary-light dark:text-white uppercase tracking-tight">+91-99992 65790</p>
+                                        <a
+                                            href="https://wa.me/919650979197?text=Hello%20I%20am%20interested%20in%20your%20services"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-xl font-black text-primary-light dark:text-white uppercase tracking-tight hover:text-accent-green transition-colors"
+                                        >
+                                            +91 96509 79197
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="flex gap-6 items-start group">
@@ -116,7 +142,7 @@ const PartnerWithUsPage = () => {
                                     </div>
                                     <div>
                                         <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">Inquiry Email</p>
-                                        <p className="text-xl font-black text-primary-light dark:text-white uppercase tracking-tight">hello@lcev.in</p>
+                                        <p className="text-xl font-black text-primary-light dark:text-white uppercase tracking-tight">support@lcev.in</p>
                                     </div>
                                 </div>
                             </div>
@@ -155,20 +181,20 @@ const PartnerWithUsPage = () => {
                                         <div className="grid md:grid-cols-2 gap-8">
                                             <div className="space-y-3">
                                                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Full Name</label>
-                                                <input required type="text" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="ARJUN SHARMA" />
+                                                <input required type="text" className="w-full min-w-0 overflow-hidden text-ellipsis bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="ARJUN SHARMA" />
                                             </div>
                                             <div className="space-y-3">
                                                 <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Organization</label>
-                                                <input required type="text" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="COMPANY NAME" />
+                                                <input required type="text" className="w-full min-w-0 overflow-hidden text-ellipsis bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="COMPANY NAME" />
                                             </div>
                                         </div>
                                         <div className="space-y-3">
                                             <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Professional Email</label>
-                                            <input required type="email" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="BUSINESS_ONLY" />
+                                            <input required type="email" className="w-full min-w-0 overflow-hidden text-ellipsis bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all" placeholder="BUSINESS_ONLY" />
                                         </div>
                                         <div className="space-y-3">
                                             <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Partnership Interest</label>
-                                            <select required className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all appearance-none cursor-pointer">
+                                            <select required className="w-full min-w-0 overflow-hidden text-ellipsis bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all appearance-none cursor-pointer">
                                                 <option>Real Estate / Site Host</option>
                                                 <option>Fleet Transition</option>
                                                 <option>Network CPO Franchise</option>
@@ -177,7 +203,7 @@ const PartnerWithUsPage = () => {
                                         </div>
                                         <div className="space-y-3">
                                             <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 ml-4">Project Brief</label>
-                                            <textarea required rows="4" className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all resize-none" placeholder="How can we accelerate your mission?"></textarea>
+                                            <textarea required rows="4" className="w-full min-w-0 overflow-hidden bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl px-6 py-4 focus:border-accent-green outline-none font-bold text-primary-light dark:text-white transition-all resize-none" placeholder="How can we accelerate your mission?"></textarea>
                                         </div>
                                         <button
                                             disabled={formState === 'sending'}

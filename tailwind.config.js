@@ -9,9 +9,9 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#121212', // Deep Charcoal (Dark Theme Base)
-          light: '#1F2937',   // Graphite Grey (Light Theme Text)
-          surface: '#F9FAFB', // Soft White (Light Theme Base)
+          DEFAULT: '#101010', // Deep Charcoal (Dark Theme Base)
+          light: '#2D2D2D',   // Engineering Grey (Light Theme Text)
+          surface: '#F5F5F7', // Crisp Studio White (Light Theme Base)
         },
         accent: {
           green: '#00E696',   // Logo Eco Green
@@ -32,8 +32,24 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Montserrat', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'],
+      },
+      fontSize: {
+        // Fluid Typography Engine: clamp(min, preferred, max)
+        'xs': 'clamp(0.7rem, 0.5vw + 0.5rem, 0.75rem)',
+        'sm': 'clamp(0.8rem, 0.8vw + 0.5rem, 0.875rem)',
+        'base': 'clamp(0.9rem, 1vw + 0.5rem, 1rem)',
+        'lg': 'clamp(1rem, 1.5vw + 0.5rem, 1.125rem)',
+        'xl': 'clamp(1.125rem, 2vw + 0.5rem, 1.25rem)',
+        '2xl': 'clamp(1.25rem, 2.5vw + 0.5rem, 1.5rem)',
+        '3xl': 'clamp(1.5rem, 3vw + 0.5rem, 1.875rem)',
+        '4xl': 'clamp(1.875rem, 4vw + 0.5rem, 2.25rem)',
+        '5xl': 'clamp(2.25rem, 5vw + 0.5rem, 3rem)',
+        '6xl': 'clamp(2.75rem, 6vw + 0.5rem, 3.75rem)',
+        '7xl': 'clamp(3.25rem, 7vw + 0.5rem, 4.5rem)',
+        '8xl': 'clamp(3.75rem, 8vw + 1rem, 6rem)',
+        '9xl': 'clamp(4.5rem, 10vw + 1rem, 8rem)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',

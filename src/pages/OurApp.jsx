@@ -1,185 +1,157 @@
 import { motion } from 'framer-motion';
 import { Smartphone, Zap, Map, ShieldCheck, Download } from 'lucide-react';
+import cmsDashboard from '../assets/images/cms_dashboard.png';
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
     <motion.div
-        whileHover={{ y: -10, scale: 1.02 }}
-        className="card-modern !p-10 relative overflow-hidden group"
+        whileHover={{ y: -10 }}
+        className="p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-white dark:bg-[#151515] border border-slate-200 dark:border-white/5 transition-all duration-500 hover:border-accent-green/30 shadow-xl group"
     >
-        <div className="w-16 h-16 bg-primary text-white rounded-[1.5rem] flex items-center justify-center mb-8 group-hover:bg-eco group-hover:scale-110 transition-all duration-500">
-            <Icon size={32} />
+        <div className="w-12 h-12 md:w-16 md:h-16 bg-primary-surface dark:bg-primary text-primary-light dark:text-white rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-10 group-hover:bg-accent-green group-hover:text-primary transition-all duration-500">
+            <Icon size={24} className="md:w-7 md:h-7" />
         </div>
-        <h3 className="text-2xl font-black mb-6 text-primary uppercase italic tracking-tighter leading-none group-hover:text-eco transition-colors">{title}</h3>
-        <p className="text-slate-400 font-bold leading-tight uppercase tracking-tight text-lg">{description}</p>
-
-        {/* Kinetic Accent */}
-        <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-eco/5 rounded-full blur-2xl group-hover:bg-eco/20 transition-all"></div>
+        <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-primary-light dark:text-white tracking-tight">{title}</h3>
+        <p className="text-slate-500 dark:text-slate-400 font-medium leading-relaxed uppercase tracking-widest text-[9px] md:text-[11px]">{description}</p>
     </motion.div>
 );
 
 const OurApp = () => {
     return (
-        <div className="bg-primary-surface dark:bg-primary text-primary-light dark:text-white min-h-screen relative transition-colors duration-300 overflow-hidden">
-            {/* Minimalist Background Accents */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-                <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent-green/5 blur-[120px] rounded-full"></div>
-                <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-accent-yellow/5 blur-[100px] rounded-full"></div>
-                {/* Tech Grid Overlay */}
-                <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        <div className="bg-primary-surface dark:bg-primary text-primary-light dark:text-white min-h-screen relative transition-colors duration-500 overflow-hidden">
+            {/* Precision Grid Background */}
+            <div className="absolute inset-0 -z-10 overflow-hidden">
+                <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.1]"
+                    style={{
+                        backgroundImage: `linear-gradient(#2D2D2D 1px, transparent 1px), linear-gradient(90deg, #2D2D2D 1px, transparent 1px)`,
+                        backgroundSize: '60px 60px'
+                    }}>
+                </div>
             </div>
 
             {/* Hero Section */}
-            <section className="relative pt-48 pb-32">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <section className="relative pt-32 md:pt-48 pb-16 md:pb-24">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="label-caps !text-accent-green !mb-8">Mobile Experience</span>
-                            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-12 leading-[0.9] tracking-tighter uppercase">
-                                INTELLIGENT <br />
-                                <span className="text-accent-green">ECOSYSTEM.</span>
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 border border-accent-green/20 mb-6 md:mb-8">
+                                <span className="w-2 h-2 rounded-full bg-accent-green"></span>
+                                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green">Software Ecosystem</span>
+                            </div>
+                            <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold mb-8 md:mb-10 leading-[1.1] md:leading-[1] tracking-tight">
+                                Integrated <br className="hidden md:block" />
+                                <span className="text-accent-green">Management.</span>
                             </h1>
-                            <p className="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-lg leading-relaxed font-medium">
-                                India's most reliable charging network in your palm.
-                                Real-time precision, AI-driven insights, and seamless control for the modern EV driver.
+                            <p className="text-lg md:text-2xl text-slate-600 dark:text-slate-400 mb-10 md:mb-12 max-w-xl leading-relaxed">
+                                A unified OS for India's evolving grid.
+                                Our CMS isn't just a dashboard—it's the mission control for your entire charging infrastructure.
                             </p>
-                            <div className="flex flex-wrap gap-6">
-                                <button className="btn-professional-primary !px-12 !py-5">
-                                    <Download size={20} className="mr-3" />
-                                    Download App
+                            <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+                                <button className="btn-professional-primary !px-8 md:!px-12 !py-4 md:!py-6 !text-[10px] md:!text-[12px] shadow-2xl shadow-accent-green/40">
+                                    REQUEST CMS DEMO
                                 </button>
-                                <button className="btn-professional border-slate-200 dark:border-white/10 border text-slate-800 dark:text-white !px-12 !py-5 hover:bg-slate-50 dark:hover:bg-white/5">
-                                    Learn More
+                                <button className="btn-professional border-slate-300 dark:border-white/10 !px-8 md:!px-12 !py-4 md:!py-6 !text-[10px] md:!text-[12px] hover:bg-slate-50 dark:hover:bg-white/5">
+                                    READ DOCUMENTATION
                                 </button>
                             </div>
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1 }}
+                            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                             className="relative"
                         >
-                            {/* Premium Smartphone Mockup */}
-                            <div className="relative z-10 mx-auto w-full max-w-[340px] aspect-[9/19] bg-white dark:bg-slate-900 rounded-[3.5rem] border-[10px] border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden p-2 group">
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-200 dark:bg-slate-800 rounded-b-2xl z-30"></div>
-
-                                <div className="w-full h-full bg-primary-surface dark:bg-primary rounded-[2.8rem] overflow-hidden relative flex flex-col p-8">
-                                    <div className="relative z-10 space-y-8 mt-10">
-                                        <div className="space-y-2">
-                                            <p className="text-[10px] font-black text-accent-green uppercase tracking-widest">LCEV OS CORE</p>
-                                            <h3 className="text-4xl font-black text-primary-light dark:text-white tracking-tighter uppercase leading-none">
-                                                FAST <br />
-                                                <span className="text-accent-green">SYNC.</span>
-                                            </h3>
-                                        </div>
-
-                                        <div className="space-y-4">
-                                            {[1, 2, 3].map(i => (
-                                                <div key={i} className="p-4 bg-white dark:bg-white/5 rounded-2xl border border-slate-100 dark:border-white/5">
-                                                    <div className="w-full h-1 bg-slate-100 dark:bg-white/10 rounded-full overflow-hidden">
-                                                        <motion.div
-                                                            animate={{ width: ["0%", "100%"] }}
-                                                            transition={{ duration: 2, delay: i * 0.5, repeat: Infinity }}
-                                                            className="h-full bg-accent-green"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <div className="pt-8">
-                                            <div className="w-full aspect-square rounded-full border border-dashed border-accent-green/30 flex items-center justify-center">
-                                                <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center animate-pulse">
-                                                    <Zap className="text-accent-green w-10 h-10" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Tech Decals */}
-                                    <div className="absolute bottom-10 left-8">
-                                        <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">v4.0.2 Stable</p>
-                                    </div>
-                                </div>
+                            <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-slate-200 dark:border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] md:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.4)]">
+                                <img
+                                    src={cmsDashboard}
+                                    alt="LCEV CMS Interface"
+                                    className="w-full h-auto"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                             </div>
-
-                            {/* Floating Decorative Elements */}
-                            <div className="absolute -top-10 -left-10 w-24 h-24 bg-accent-yellow rounded-full blur-3xl opacity-30"></div>
-                            <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-accent-green rounded-full blur-3xl opacity-20"></div>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Features Grid */}
-            <section className="py-24 md:py-32 bg-slate-50 dark:bg-black/20 transition-colors duration-300">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
-                        <div>
-                            <span className="label-caps !text-accent-green !mb-6">System Features</span>
-                            <h2 className="text-primary-light dark:text-white font-black text-5xl md:text-7xl uppercase tracking-tighter leading-[0.9]">
-                                ENGINEERED FOR <br />
-                                <span className="text-accent-green">PRECISION.</span>
+            {/* Sub-sections Grid */}
+            <section className="py-24 md:py-32 border-t border-slate-200 dark:border-white/5">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div className="mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+                        <div className="max-w-3xl">
+                            <span className="label-caps !text-accent-green !mb-6">System Architecture</span>
+                            <h2 className="text-primary-light dark:text-white font-bold text-5xl md:text-7xl tracking-tight leading-[1]">
+                                BUILT FOR <br />
+                                <span className="text-accent-green">MISSION-CRITICAL OPS.</span>
                             </h2>
                         </div>
-                        <p className="text-lg text-slate-500 dark:text-slate-400 font-medium md:max-w-xs leading-relaxed">
-                            Zero lag. One tap interaction.
-                            Built for technical authority.
-                        </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <FeatureCard
-                            icon={Map}
-                            title="Live Grid"
-                            description="Real-time precision across 500+ smart points."
-                        />
-                        <FeatureCard
                             icon={Zap}
                             title="Flash Start"
-                            description="Instant handshake via QR or biometric sync."
+                            description="Instant handshake protocols for zero-wait charging sessions."
                         />
                         <FeatureCard
                             icon={ShieldCheck}
                             title="Safe Vault"
-                            description="Military grade encryption for all transactions."
+                            description="Financial-grade encryption for all tariff and billing data."
                         />
                         <FeatureCard
                             icon={Smartphone}
-                            title="Smart Sync"
-                            description="Live telemetry direct to your interface."
+                            title="Remote Ops"
+                            description="OTA updates and remote diagnostics for 99.9% uptime."
+                        />
+                        <FeatureCard
+                            icon={Download}
+                            title="Open Access"
+                            description="Full API integration for custom enterprise ERP solutions."
                         />
                     </div>
                 </div>
             </section>
 
-            {/* Final CTA */}
-            <section className="py-24 md:py-40">
-                <div className="max-w-5xl mx-auto px-4">
-                    <div className="p-16 md:p-24 bg-primary dark:bg-black rounded-[2rem] text-white relative overflow-hidden shadow-2xl border border-white/5 transition-colors duration-300">
-                        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent-green/10 blur-[100px] rounded-full"></div>
+            {/* Mobile App Teaser */}
+            <section className="py-24 md:py-40 bg-white dark:bg-[#0A0A0A] border-y border-slate-200 dark:border-white/5">
+                <div className="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div className="grid lg:grid-cols-2 gap-24 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="order-2 lg:order-1"
+                        >
+                            <div className="relative z-10 mx-auto w-full max-w-[320px] aspect-[9/19] bg-white dark:bg-black rounded-[3.5rem] border-[10px] border-slate-200 dark:border-white/5 shadow-2xl overflow-hidden p-2">
+                                <div className="w-full h-full bg-primary-surface dark:bg-primary rounded-[2.8rem] flex flex-col items-center justify-center p-8">
+                                    <p className="text-[10px] font-black text-accent-green uppercase tracking-widest mb-6">Mobile Interface</p>
+                                    <Zap className="text-accent-green w-12 h-12 mb-8 animate-pulse" />
+                                    <div className="w-full h-1 bg-white/10 rounded-full mb-4">
+                                        <div className="h-full w-2/3 bg-accent-green"></div>
+                                    </div>
+                                    <p className="text-white font-bold tracking-widest text-xs">V4.0.2 SYNC</p>
+                                </div>
+                            </div>
+                        </motion.div>
 
-                        <div className="relative z-10 text-center max-w-3xl mx-auto">
-                            <h2 className="text-5xl md:text-7xl font-black mb-10 uppercase tracking-tighter leading-[0.9]">
-                                THE FUTURE IS <br />
-                                <span className="text-accent-green">DOWNLOADABLE.</span>
+                        <div className="order-1 lg:order-2">
+                            <span className="label-caps !text-accent-green !mb-8">User Experience</span>
+                            <h2 className="text-6xl md:text-8xl font-bold mb-10 leading-[1] tracking-tight">
+                                SCAN. <br />
+                                CHARGE. <br />
+                                <span className="text-accent-green">PROFIT.</span>
                             </h2>
-                            <p className="text-xl text-white/60 mb-16 leading-relaxed font-medium">
-                                Join India's most intelligent charging network.
-                                Be the first to experience the technical shift in mobility.
+                            <p className="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-lg leading-relaxed font-medium">
+                                High-fidelity mockups of the 'LetsChargeEV' app showing 'Scan to Charge'
+                                and 'Remote Monitoring' features for end-users.
                             </p>
-
-                            <div className="flex flex-col sm:flex-row justify-center gap-6">
-                                <button className="btn-professional-primary !px-16 !py-5">
-                                    Notify Me
-                                </button>
-                                <button className="btn-professional border-white/20 border text-white !px-16 !py-5 hover:bg-white/5 transition-all">
-                                    View Roadmap
-                                </button>
+                            <div className="flex gap-4">
+                                <div className="w-40 h-14 bg-black rounded-xl border border-white/10 flex items-center justify-center text-white text-xs font-bold uppercase tracking-widest">App Store</div>
+                                <div className="w-40 h-14 bg-black rounded-xl border border-white/10 flex items-center justify-center text-white text-xs font-bold uppercase tracking-widest">Play Store</div>
                             </div>
                         </div>
                     </div>

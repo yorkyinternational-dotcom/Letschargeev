@@ -1,3 +1,5 @@
+import { useParams } from 'react-router-dom';
+
 const LegalPage = () => {
     const { type } = useParams();
     const titles = {
@@ -68,7 +70,7 @@ const LegalPage = () => {
                 </div>
 
                 <div className="mt-32 p-10 bg-white dark:bg-white/5 rounded-[2rem] border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400 text-sm font-medium leading-relaxed">
-                    For further inquiries regarding our technical and legal policies, please contact our strategic compliance team at <span className="text-primary-light dark:text-white font-bold">hello@lcev.in</span>
+                    For further inquiries regarding our technical and legal policies, please contact our strategic compliance team at <span className="text-primary-light dark:text-white font-bold">support@lcev.in</span>
                 </div>
             </div>
         </div>
