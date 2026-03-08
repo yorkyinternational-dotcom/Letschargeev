@@ -63,9 +63,9 @@ const PartnerWithUsPage = () => {
                     >
                         <span className="label-caps !mb-8 block">Strategic Alliances</span>
                         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 md:mb-10 tracking-tighter uppercase leading-[1.1] md:leading-[1] w-full flex flex-col items-center">
-                            <span className="block mb-1 md:mb-2">BUILD THE</span>
-                            <span className="block text-[24px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight w-full">INFRASTRUCTURE</span>
-                            <span className="text-accent-green block mt-1 md:mt-2">OF TOMORROW.</span>
+                            <span className="block mb-1 md:mb-2 text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-none">BUILD THE</span>
+                            <span className="block text-[34px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight w-full leading-none">INFRASTRUCTURE</span>
+                            <span className="text-accent-green block mt-1 md:mt-2 text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-none">OF TOMORROW.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed uppercase tracking-tight">
                             LCEv is seeking visionary partners to accelerate the transition to sustainable mobility through technical authority.
