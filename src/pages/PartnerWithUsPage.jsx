@@ -36,7 +36,7 @@ const PartnerWithUsPage = () => {
     return (
         <div className="bg-primary-surface dark:bg-primary min-h-screen transition-colors duration-300">
             {/* Hero Section */}
-            <section className="relative pt-32 md:pt-48 pb-16 md:pb-24 overflow-hidden bg-black border-b border-white/5">
+            <section className="relative pt-32 md:pt-40 pb-16 overflow-hidden bg-black border-b border-white/5">
                 {/* Background Video */}
                 <div className="absolute inset-0 z-0">
                     <video
@@ -74,7 +74,7 @@ const PartnerWithUsPage = () => {
             </section>
 
             {/* Partnership Categories */}
-            <section className="py-16 md:py-32">
+            <section className="py-16 md:py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-3 gap-10">
                         {partnershipTypes.map((type, i) => (
@@ -84,21 +84,22 @@ const PartnerWithUsPage = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="card-professional !p-12 bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 group hover:border-accent-green/40 transition-all"
+                                className="card-professional !p-12 bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 group hover:border-accent-green/40 transition-all h-full"
                             >
                                 <div className="w-16 h-16 rounded-2xl bg-accent-green/10 text-accent-green flex items-center justify-center mb-10 group-hover:bg-accent-green group-hover:text-primary transition-all duration-500">
                                     <type.icon size={28} />
                                 </div>
                                 <h3 className="text-3xl font-black text-primary-light dark:text-white mb-6 uppercase tracking-tighter leading-none group-hover:text-accent-green transition-colors">{type.title}</h3>
-                                <p className="text-slate-500 dark:text-slate-400 mb-10 font-medium leading-relaxed">{type.description}</p>
-                                <ul className="space-y-4">
-                                    {type.benefits.map((benefit, j) => (
-                                        <li key={j} className="flex items-center gap-3 text-[10px] font-black text-primary-light dark:text-white uppercase tracking-widest">
-                                            <CheckCircle2 size={14} className="text-accent-green" />
-                                            {benefit}
-                                        </li>
-                                    ))}
-                                </ul>
+                                <div className="flex-1 mt-auto">
+                                    <ul className="space-y-4">
+                                        {type.benefits.map((benefit, j) => (
+                                            <li key={j} className="flex items-center gap-3 text-[10px] font-black text-primary-light dark:text-white uppercase tracking-widest">
+                                                <CheckCircle2 size={14} className="text-accent-green" />
+                                                {benefit}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
@@ -106,7 +107,7 @@ const PartnerWithUsPage = () => {
             </section>
 
             {/* Contact Form Section */}
-            <section className="py-16 md:py-32 border-t border-slate-200 dark:border-white/10">
+            <section className="py-16 md:py-24 border-t border-slate-200 dark:border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-24">
                         <div>
