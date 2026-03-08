@@ -9,6 +9,10 @@ const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  // Determine if we are on a page with a strictly dark hero that requires a dark navbar before scrolling.
+  const isDarkHeroPage = location.pathname === '/partner-with-us' || location.pathname === '/game';
+  const effectiveTheme = (isDarkHeroPage && !scrolled) ? 'dark' : theme;
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -43,7 +47,7 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center relative z-[120]">
         <Link to="/" className="flex items-center group shrink-0" aria-label="LCEv Home">
-          <Logo className="h-10 md:h-12 lg:h-16" withText={false} theme={isOpen ? 'dark' : theme} />
+          <Logo className="h-10 md:h-12 lg:h-16" withText={false} theme={isOpen ? 'dark' : effectiveTheme} />
         </Link>
 
         {/* Desktop Navigation - Hidden on Mobile */}
@@ -58,7 +62,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                 <span className="text-[7px] font-mono text-accent-green opacity-40 group-hover:opacity-100 transition-opacity">
                   {link.id}
                 </span>
-                <span className={`text-[9px] font-black uppercase tracking-[0.3em] transition-all duration-300 ${theme === 'dark' ? 'text-white/60 group-hover:text-white' : 'text-slate-900/60 group-hover:text-slate-900'
+                <span className={`text-[9px] font-black uppercase tracking-[0.3em] transition-all duration-300 ${effectiveTheme === 'dark' ? 'text-white/60 group-hover:text-white' : 'text-slate-900/60 group-hover:text-slate-900'
                   }`}>
                   {link.name}
                 </span>
@@ -78,14 +82,14 @@ const Navbar = ({ theme, toggleTheme }) => {
           {/* Theme Logic Controller */}
           <button
             onClick={toggleTheme}
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-            className={`group relative p-2.5 rounded-full border transition-all duration-500 overflow-hidden ${theme === 'dark'
+            aria-label={`Switch to ${effectiveTheme === 'dark' ? 'light' : 'dark'} mode`}
+            className={`group relative p-2.5 rounded-full border transition-all duration-500 overflow-hidden ${effectiveTheme === 'dark'
               ? 'bg-white/5 border-white/10 text-accent-yellow shadow-[0_0_20px_rgba(255,200,0,0.1)]'
               : 'bg-slate-50 border-slate-200 text-slate-900 shadow-sm'
               }`}
           >
             <div className="relative z-10 flex items-center justify-center">
-              {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
+              {effectiveTheme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
             </div>
             <div className="absolute inset-0 bg-accent-green/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
           </button>
@@ -103,7 +107,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-label="Toggle navigation menu"
-            className={`lg:hidden p-3 rounded-full border transition-all ${isOpen || theme === 'dark' ? 'bg-white/5 border-white/10 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
+            className={`lg:hidden p-3 rounded-full border transition-all ${isOpen || effectiveTheme === 'dark' ? 'bg-white/5 border-white/10 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
               }`}
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
