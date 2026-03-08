@@ -1,0 +1,29 @@
+remote: error: GH013: Repository rule violations found for refs/heads/main.        
+remote: 
+remote: - GITHUB PUSH PROTECTION        
+remote:   —————————————————————————————————————————        
+remote:     Resolve the following violations before pushing again        
+remote: 
+remote:     - Push cannot contain secrets        
+remote: 
+remote:             
+remote:      (?) Learn how to resolve a blocked push        
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push        
+remote:             
+remote:      (?) This repository does not have Secret Scanning enabled, but is eligible. Enable Secret Scanning to view and manage detected secrets.        
+remote:      Visit the repository settings page, https://github.com/yorkyinternational-dotcom/Letschargeev/settings/security_analysis        
+remote:             
+remote:             
+remote:       —— Mapbox Secret Access Token ————————————————————————        
+remote:        locations:        
+remote:          - commit: 572bd416a1820a94454c65d03ea5115e17586581        
+remote:            path: .env:1        
+remote:             
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.        
+remote:        https://github.com/yorkyinternational-dotcom/Letschargeev/security/secret-scanning/unblock-secret/3AeaLGeAakse9YrC6E6AoXqFDsF        
+remote:             
+remote: 
+remote: 
+To https://github.com/yorkyinternational-dotcom/Letschargeev.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/yorkyinternational-dotcom/Letschargeev.git'

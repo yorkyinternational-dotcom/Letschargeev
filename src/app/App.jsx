@@ -15,7 +15,7 @@ import ScrollToTop from '../components/layout/ScrollToTop'
 import WhatsAppFAB from '../components/common/WhatsAppFAB'
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   useEffect(() => {
     localStorage.setItem('theme', theme);

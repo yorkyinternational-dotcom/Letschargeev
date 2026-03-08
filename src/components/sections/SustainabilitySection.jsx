@@ -43,7 +43,7 @@ const SustainabilitySection = () => {
     ];
 
     return (
-        <section id="sustainability" className="relative min-h-screen flex items-center bg-primary-surface dark:bg-primary transition-colors duration-300 overflow-hidden py-24 md:py-40">
+        <section id="sustainability" className="relative min-h-screen flex items-center bg-primary-surface dark:bg-primary transition-colors duration-300 overflow-hidden py-16 md:py-24 lg:py-32">
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-green/5 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2"></div>
 
@@ -65,7 +65,7 @@ const SustainabilitySection = () => {
                         </motion.div>
 
                         {/* Live Impact Dashboard */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 md:mb-20">
                             <div className="glass-panel p-10 rounded-3xl relative overflow-hidden group tech-glow">
                                 <div className="absolute top-4 right-8 flex items-center gap-2">
                                     <div className="w-2 h-2 bg-accent-green rounded-full animate-pulse"></div>

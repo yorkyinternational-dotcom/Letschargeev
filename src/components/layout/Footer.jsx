@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary dark:bg-black text-white pt-32 pb-32 lg:pb-16 border-t border-white/5 relative overflow-hidden transition-colors duration-500">
+    <footer className="bg-primary dark:bg-black text-white pt-16 md:pt-32 pb-24 lg:pb-16 border-t border-white/5 relative overflow-hidden transition-colors duration-500">
       {/* Precision Grid Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-accent-green/5 blur-[150px] rounded-full"></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-20 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-20 mb-12 md:mb-24">
           <div className="lg:col-span-5">
             <Link to="/" className="mb-12 block">
               <Logo withText={false} theme="dark" className="h-16 md:h-20" />

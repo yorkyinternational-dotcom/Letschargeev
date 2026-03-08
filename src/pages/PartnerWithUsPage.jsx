@@ -36,7 +36,7 @@ const PartnerWithUsPage = () => {
     return (
         <div className="bg-primary-surface dark:bg-primary min-h-screen transition-colors duration-300">
             {/* Hero Section */}
-            <section className="relative pt-48 pb-24 overflow-hidden bg-black border-b border-white/5">
+            <section className="relative pt-32 md:pt-48 pb-16 md:pb-24 overflow-hidden bg-black border-b border-white/5">
                 {/* Background Video */}
                 <div className="absolute inset-0 z-0">
                     <video
@@ -74,7 +74,7 @@ const PartnerWithUsPage = () => {
             </section>
 
             {/* Partnership Categories */}
-            <section className="py-32">
+            <section className="py-16 md:py-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-3 gap-10">
                         {partnershipTypes.map((type, i) => (
@@ -106,7 +106,7 @@ const PartnerWithUsPage = () => {
             </section>
 
             {/* Contact Form Section */}
-            <section className="py-32 border-t border-slate-200 dark:border-white/10">
+            <section className="py-16 md:py-32 border-t border-slate-200 dark:border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-24">
                         <div>

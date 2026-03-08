@@ -3,14 +3,14 @@ import ChargerMap from '../maps/ChargerMap';
 
 const MapSection = () => {
     return (
-        <section id="locate" className="py-24 md:py-40 bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
+        <section id="locate" className="py-16 md:py-24 lg:py-16 md:py-32 bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
             {/* Tech Background */}
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none"
                 style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+                <div className="mb-12 md:mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                     <div>
                         <span className="label-caps !text-accent-green !mb-6">Global Network Locator</span>
                         <h2 className="text-primary-light dark:text-white font-bold text-5xl md:text-8xl tracking-tight leading-[1]">

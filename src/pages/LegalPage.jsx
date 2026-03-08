@@ -39,12 +39,12 @@ const LegalPage = () => {
     const sections = content[type] || [{ h2: "Information", p: "Detailed information for this section will be available soon." }];
 
     return (
-        <div className="pt-48 pb-32 min-h-screen bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
+        <div className="pt-32 md:pt-48 pb-16 md:pb-32 min-h-screen bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
             {/* Tech Grid Overlay */}
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="mb-20">
+                <div className="mb-12 md:mb-20">
                     <h1 className="text-5xl md:text-7xl font-black text-primary-light dark:text-white mb-6 uppercase tracking-tighter leading-none">{title}</h1>
                     <div className="h-1.5 w-24 bg-accent-green rounded-full shadow-[0_0_10px_rgba(0,230,150,0.3)]"></div>
                 </div>
@@ -69,7 +69,7 @@ const LegalPage = () => {
                     </div>
                 </div>
 
-                <div className="mt-32 p-10 bg-white dark:bg-white/5 rounded-[2rem] border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400 text-sm font-medium leading-relaxed">
+                <div className="mt-16 md:mt-32 p-10 bg-white dark:bg-white/5 rounded-[2rem] border border-slate-200 dark:border-white/10 text-slate-500 dark:text-slate-400 text-sm font-medium leading-relaxed">
                     For further inquiries regarding our technical and legal policies, please contact our strategic compliance team at <span className="text-primary-light dark:text-white font-bold">support@lcev.in</span>
                 </div>
             </div>

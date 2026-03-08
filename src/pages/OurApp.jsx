@@ -79,9 +79,9 @@ const OurApp = () => {
             </section>
 
             {/* Sub-sections Grid */}
-            <section className="py-24 md:py-32 border-t border-slate-200 dark:border-white/5">
+            <section className="py-16 md:py-24 border-t border-slate-200 dark:border-white/5">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
-                    <div className="mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+                    <div className="mb-12 md:mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                         <div className="max-w-3xl">
                             <span className="label-caps !text-accent-green !mb-6">System Architecture</span>
                             <h2 className="text-primary-light dark:text-white font-bold text-5xl md:text-7xl tracking-tight leading-[1]">
@@ -117,7 +117,7 @@ const OurApp = () => {
             </section>
 
             {/* Mobile App Teaser */}
-            <section className="py-24 md:py-40 bg-white dark:bg-[#0A0A0A] border-y border-slate-200 dark:border-white/5">
+            <section className="py-16 md:py-24 lg:py-16 md:py-32 bg-white dark:bg-[#0A0A0A] border-y border-slate-200 dark:border-white/5">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
                     <div className="grid lg:grid-cols-2 gap-24 items-center">
                         <motion.div

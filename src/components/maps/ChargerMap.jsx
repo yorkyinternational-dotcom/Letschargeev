@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, useMap, Circle } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap, Circle, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { LocateFixed, Navigation, Battery } from 'lucide-react';
@@ -49,6 +49,15 @@ function LocationMarker({ userLocation, setUserLocation }) {
     );
 }
 
+function MapEventsHelper({ setSelectedCharger }) {
+    useMapEvents({
+        click() {
+            setSelectedCharger(null);
+        },
+    });
+    return null;
+}
+
 const ChargerMap = () => {
     const [userLocation, setUserLocation] = useState(null);
     const [selectedCharger, setSelectedCharger] = useState(null);
@@ -93,6 +102,7 @@ const ChargerMap = () => {
                     ))}
 
                     <LocationMarker userLocation={userLocation} setUserLocation={setUserLocation} />
+                    <MapEventsHelper setSelectedCharger={setSelectedCharger} />
                 </MapContainer>
             </div>
 
@@ -109,7 +119,7 @@ const ChargerMap = () => {
 
             {/* Float Info Card (Ola/Uber Style) */}
             {selectedCharger && (
-                <div className="absolute top-10 left-10 z-[1000] w-full max-w-sm">
+                <div className="absolute top-10 left-5 right-5 md:left-10 md:right-auto z-[1000] w-auto md:w-full max-w-sm mx-auto md:mx-0">
                     <div className="glass-panel p-8 rounded-3xl border-accent-green/30 animate-slide-up" style={{ backgroundColor: 'rgba(10, 10, 10, 0.85)', backdropFilter: 'blur(16px)' }}>
                         <div className="flex justify-between items-start mb-6">
                             <div>

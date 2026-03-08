@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <div className="pt-48 pb-32 min-h-screen bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
+        <div className="pt-32 md:pt-48 pb-16 md:pb-32 min-h-screen bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
             {/* Tech Grid Overlay */}
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-green/5 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
@@ -12,11 +12,11 @@ const About = () => {
                     <span className="text-accent-green">LCEV_SYSTEMS.</span>
                 </h1>
                 <p className="text-2xl md:text-4xl text-slate-500 dark:text-slate-400 max-w-5xl mx-auto leading-tight font-bold uppercase tracking-tighter">
-                    Architecting India's most <span className="text-primary-light dark:text-white">resilient infrastructure</span> <br />
+                    Architecting India's most <span className="text-primary-light dark:text-white">resilient infrastructure</span> <br className="hidden md:block" />
                     and technically advanced <span className="text-accent-green">ecosystem.</span>
                 </p>
 
-                <div className="mt-32 grid md:grid-cols-3 gap-10">
+                <div className="mt-16 md:mt-32 grid md:grid-cols-3 gap-10">
                     {[
                         { label: 'GENESIS', value: '2024_Q1' },
                         { label: 'NETWORK', value: 'LIVE_SYNC' },

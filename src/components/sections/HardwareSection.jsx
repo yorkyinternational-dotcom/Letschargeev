@@ -45,7 +45,7 @@ const HardwareSection = () => {
     ];
 
     return (
-        <section id="hardware" className="py-24 md:py-40 bg-primary-surface dark:bg-primary transition-colors duration-500 relative overflow-hidden">
+        <section id="hardware" className="py-16 md:py-24 lg:py-16 md:py-32 bg-primary-surface dark:bg-primary transition-colors duration-500 relative overflow-hidden">
             {/* Precision Grid Background */}
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none"
                 style={{
@@ -55,7 +55,7 @@ const HardwareSection = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
-                <div className="mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+                <div className="mb-12 md:mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                     <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 border border-accent-green/20 mb-6">
                             <span className="w-2 h-2 rounded-full bg-accent-green"></span>

@@ -27,7 +27,7 @@ const BusinessModel = () => {
     ];
 
     return (
-        <section className="py-24 md:py-40 bg-white dark:bg-[#0A0A0A] transition-colors duration-500 overflow-hidden">
+        <section className="py-16 md:py-24 lg:py-16 md:py-32 bg-white dark:bg-[#0A0A0A] transition-colors duration-500 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
 

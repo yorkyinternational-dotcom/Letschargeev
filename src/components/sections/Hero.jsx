@@ -62,7 +62,7 @@ const Hero = () => {
             </div>
 
             {/* Technical Labels */}
-            <div className="mt-24 flex flex-wrap gap-16 border-t border-slate-200 dark:border-white/10 pt-12">
+            <div className="mt-12 md:mt-24 flex flex-wrap gap-16 border-t border-slate-200 dark:border-white/10 pt-12">
               <div className="group/metric">
                 <span className="block text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] mb-4 group-hover/metric:text-accent-green transition-colors">System Standard</span>
                 <span className="text-2xl font-black dark:text-white tracking-tighter uppercase">OCPP 2.0.1+</span>

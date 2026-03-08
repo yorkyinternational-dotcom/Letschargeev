@@ -128,12 +128,12 @@ const SolutionsSection = () => {
     ];
 
     return (
-        <section id="solutions" className="py-24 md:py-40 bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
+        <section id="solutions" className="py-16 md:py-24 lg:py-16 md:py-32 bg-primary-surface dark:bg-primary transition-colors duration-300 relative overflow-hidden">
             {/* Tech Background */}
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="mb-32">
+                <div className="mb-16 md:mb-32">
                     <span className="label-caps !text-accent-green !mb-8">Technical Ecosystem</span>
                     <h2 className="max-w-5xl text-primary-light dark:text-white font-black text-6xl md:text-9xl uppercase tracking-[1] leading-[0.8]">
                         MODULAR <br />

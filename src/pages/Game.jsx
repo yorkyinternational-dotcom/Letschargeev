@@ -4,7 +4,7 @@ import { Gamepad2 } from 'lucide-react';
 
 const Game = () => {
     return (
-        <div className="pt-32 pb-24 min-h-screen bg-primary dark:bg-black text-white flex items-center justify-center relative overflow-hidden">
+        <div className="pt-24 md:pt-32 pb-16 md:pb-24 min-h-screen bg-primary dark:bg-black text-white flex items-center justify-center relative overflow-hidden">
             {/* Tech Grid Overlay */}
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(white 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 

@@ -10,7 +10,7 @@ const StatsSection = () => {
     ];
 
     return (
-        <section className="py-24 md:py-32 bg-primary dark:bg-black transition-colors duration-300 relative overflow-hidden border-y border-white/5">
+        <section className="py-16 md:py-24 bg-primary dark:bg-black transition-colors duration-300 relative overflow-hidden border-y border-white/5">
             {/* Minimalist Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(white 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
