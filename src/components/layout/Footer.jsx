@@ -73,7 +73,7 @@ const Footer = () => {
               >
                 +91 96509 79197
               </a>
-              <p className="text-white/40 text-xs font-bold uppercase tracking-[0.2em]">support.core@lcev.in</p>
+              <p className="text-white/40 text-xs font-bold uppercase tracking-[0.2em]">support@lcev.in</p>
               <div className="pt-6 border-t border-white/5">
                 <p className="text-[10px] font-bold text-white/20 uppercase tracking-[0.4em]">Available 24/7/365 via WhatsApp</p>
               </div>
