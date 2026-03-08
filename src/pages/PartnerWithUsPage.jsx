@@ -44,12 +44,12 @@ const PartnerWithUsPage = () => {
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover opacity-50 grayscale"
+                        className="w-full h-full object-cover opacity-80 mix-blend-screen grayscale"
                     >
                         <source src={heroVideo} type="video/mp4" />
                     </video>
                     {/* Premium Overlays */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black z-10"></div>
                 </div>
 
                 {/* Tech Grid Overlay */}
@@ -62,10 +62,10 @@ const PartnerWithUsPage = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="label-caps !mb-8 block">Strategic Alliances</span>
-                        <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase leading-[1.1] md:leading-[0.9] w-full">
-                            BUILD THE <br className="block md:hidden" />
-                            <span className="tracking-tight">INFRASTRUCTURE</span> <br className="hidden md:block" />
-                            <span className="text-accent-green block mt-2 md:inline md:mt-0"> OF TOMORROW.</span>
+                        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 md:mb-10 tracking-tighter uppercase leading-[1.1] md:leading-[1] w-full flex flex-col items-center">
+                            <span className="block mb-1 md:mb-2">BUILD THE</span>
+                            <span className="block text-[24px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight w-full">INFRASTRUCTURE</span>
+                            <span className="text-accent-green block mt-1 md:mt-2">OF TOMORROW.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed uppercase tracking-tight">
                             LCEv is seeking visionary partners to accelerate the transition to sustainable mobility through technical authority.
