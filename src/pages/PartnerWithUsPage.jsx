@@ -44,12 +44,12 @@ const PartnerWithUsPage = () => {
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover opacity-30 grayscale"
+                        className="w-full h-full object-cover opacity-50 grayscale"
                     >
                         <source src={heroVideo} type="video/mp4" />
                     </video>
                     {/* Premium Overlays */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black z-10"></div>
                 </div>
 
                 {/* Tech Grid Overlay */}
@@ -62,7 +62,7 @@ const PartnerWithUsPage = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="label-caps !mb-8 block">Strategic Alliances</span>
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase leading-[1.1] md:leading-[0.9] w-full">
+                        <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 md:mb-8 tracking-tighter uppercase leading-[1.1] md:leading-[0.9] w-full">
                             BUILD THE <br className="block md:hidden" />
                             <span className="tracking-tight">INFRASTRUCTURE</span> <br className="hidden md:block" />
                             <span className="text-accent-green block mt-2 md:inline md:mt-0"> OF TOMORROW.</span>
