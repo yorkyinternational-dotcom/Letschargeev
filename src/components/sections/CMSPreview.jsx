@@ -20,7 +20,7 @@ const CMSPreview = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
-                <div className="text-center mb-12 md:mb-24">
+                <div className="text-center mb-12 md:mb-16">
                     <span className="label-caps !text-accent-green !mb-6 mx-auto">Smart Management Ecosystem</span>
                     <h2 className="text-white font-bold text-5xl md:text-8xl tracking-tight leading-[1] mb-8 max-w-5xl mx-auto">
                         The <span className="text-accent-green">Intelligence</span> Behind the Power.

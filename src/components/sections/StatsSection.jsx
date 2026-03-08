@@ -25,7 +25,7 @@ const StatsSection = () => {
                             transition={{ delay: i * 0.1, duration: 0.8 }}
                             className="flex flex-col group relative"
                         >
-                            <p className="text-[10px] font-black text-accent-green uppercase tracking-[0.3em] mb-4">
+                            <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] mb-4">
                                 / {stat.label}
                             </p>
                             <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-4 group-hover:text-accent-green transition-colors duration-500">

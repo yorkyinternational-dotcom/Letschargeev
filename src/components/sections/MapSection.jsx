@@ -10,7 +10,7 @@ const MapSection = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-12 md:mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+                <div className="mb-12 md:mb-16 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                     <div>
                         <span className="label-caps !text-accent-green !mb-6">Global Network Locator</span>
                         <h2 className="text-primary-light dark:text-white font-bold text-5xl md:text-8xl tracking-tight leading-[1]">

@@ -55,11 +55,11 @@ const HardwareSection = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
-                <div className="mb-12 md:mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+                <div className="mb-12 md:mb-16 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                     <div className="max-w-4xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 border border-accent-green/20 mb-6">
                             <span className="w-2 h-2 rounded-full bg-accent-green"></span>
-                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green">Engineering Precision</span>
+                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Engineering Precision</span>
                         </div>
                         <h2 className="text-primary-light dark:text-white font-bold text-5xl md:text-8xl tracking-tight leading-[1]">
                             HARDWARE <br />
@@ -83,9 +83,9 @@ const HardwareSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1, duration: 0.8 }}
-                            className="group relative tech-glow"
+                            className="group relative tech-glow h-full"
                         >
-                            <div className="glass-panel rounded-[3rem] overflow-hidden transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(34,197,94,0.15)]">
+                            <div className="glass-panel h-full flex flex-col justify-between rounded-[3rem] overflow-hidden transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(34,197,94,0.15)]">
                                 {/* Product Spotlight Container */}
                                 <div className="aspect-[1/1] bg-slate-50/50 dark:bg-black/40 flex items-center justify-center p-12 relative overflow-hidden">
                                     {/* Geometric Background Element */}
@@ -106,7 +106,7 @@ const HardwareSection = () => {
 
                                 <div className="p-12">
                                     <div className="mb-10">
-                                        <p className="text-[10px] font-black text-accent-green uppercase tracking-[0.3em] mb-4">{product.category}</p>
+                                        <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] mb-4">{product.category}</p>
                                         <h3 className="text-4xl font-black text-primary-light dark:text-white tracking-tighter leading-none uppercase">
                                             {product.name}
                                         </h3>
@@ -122,7 +122,7 @@ const HardwareSection = () => {
                                                 {/* Hidden Blueprint Tooltip */}
                                                 <div className="absolute left-full ml-4 opacity-0 group-hover/spec:opacity-100 transition-opacity z-50 pointer-events-none">
                                                     <div className="glass-morphic p-4 rounded-xl min-w-[200px]">
-                                                        <p className="text-[9px] font-black text-accent-green uppercase tracking-widest mb-2">Technical Insight</p>
+                                                        <p className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-2">Technical Insight</p>
                                                         <p className="text-[10px] text-white/70 leading-relaxed uppercase">Enterprise-grade {spec.toLowerCase()} integration for maximum reliability.</p>
                                                     </div>
                                                 </div>

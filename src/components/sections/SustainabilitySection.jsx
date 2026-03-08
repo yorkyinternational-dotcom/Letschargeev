@@ -57,7 +57,7 @@ const SustainabilitySection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
                     <div className="lg:col-span-12 mb-16">
                         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                            <span className="label-caps !text-accent-green !mb-8 italic">Environmental Proof-of-Work</span>
+                            <span className="label-caps !mb-8 italic">Environmental Proof-of-Work</span>
                             <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-primary-light dark:text-white mb-12 tracking-tighter uppercase leading-[0.9]">
                                 SUSTAINABLE <br />
                                 <span className="text-accent-green">PRECISION.</span>
@@ -65,11 +65,11 @@ const SustainabilitySection = () => {
                         </motion.div>
 
                         {/* Live Impact Dashboard */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 md:mb-20">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 md:mb-12">
                             <div className="glass-panel p-10 rounded-3xl relative overflow-hidden group tech-glow">
                                 <div className="absolute top-4 right-8 flex items-center gap-2">
                                     <div className="w-2 h-2 bg-accent-green rounded-full animate-pulse"></div>
-                                    <span className="text-[10px] font-black text-accent-green uppercase tracking-widest leading-none">Live Data Feed</span>
+                                    <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest leading-none">Live Data Feed</span>
                                 </div>
                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">Total CO2 Offset (KG)</p>
                                 <motion.h3
@@ -122,7 +122,7 @@ const SustainabilitySection = () => {
                                     <div className="glass-panel !p-12 h-full hover:border-accent-green/40 transition-all tech-glow">
                                         <div className="text-accent-green mb-8">{item.icon}</div>
                                         <div>
-                                            <p className="text-[10px] font-black text-accent-green/60 mb-2 tracking-widest uppercase">{item.metric}</p>
+                                            <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 mb-2 tracking-widest uppercase">{item.metric}</p>
                                             <h4 className="text-2xl font-black text-primary-light dark:text-white mb-4 uppercase">{item.title}</h4>
                                             <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed italic">{item.desc}</p>
                                         </div>
@@ -135,7 +135,7 @@ const SustainabilitySection = () => {
                     <div className="lg:col-span-4">
                         <div className="glass-panel bg-primary/40 dark:bg-black/40 p-12 border-none shadow-2xl relative overflow-hidden">
                             <div className="relative z-10 text-center lg:text-left">
-                                <span className="text-[10px] font-black uppercase text-accent-green tracking-widest block mb-12 italic border-l-2 border-accent-green pl-4">System Efficiency Index</span>
+                                <span className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-widest block mb-12 italic border-l-2 border-accent-green pl-4">System Efficiency Index</span>
                                 <h3 className="text-8xl font-black text-white leading-none tracking-tighter mb-4 italic">
                                     9.9<span className="text-2xl text-accent-green opacity-50">/10</span>
                                 </h3>

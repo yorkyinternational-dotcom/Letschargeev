@@ -38,7 +38,7 @@ const Hero = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 border border-accent-green/20 mb-8">
               <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green">Infrastructure of Modern Mobility</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Infrastructure of Modern Mobility</span>
             </div>
 
             <h1 className="text-4xl md:text-8xl lg:text-9xl font-black text-primary-light dark:text-white mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter uppercase">
@@ -104,7 +104,7 @@ const Hero = () => {
                 <div className="absolute bottom-12 left-12 right-12">
                   <div className="flex items-end justify-between">
                     <div>
-                      <span className="text-[10px] font-black text-accent-green uppercase tracking-[0.4em] mb-4 block">Fleet Standard</span>
+                      <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em] mb-4 block">Fleet Standard</span>
                       <p className="text-4xl font-black text-white tracking-widest">D180X</p>
                     </div>
                     <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white backdrop-blur-xl">

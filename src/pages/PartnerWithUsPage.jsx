@@ -61,7 +61,7 @@ const PartnerWithUsPage = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="label-caps !text-accent-green !mb-8 block">Strategic Alliances</span>
+                        <span className="label-caps !mb-8 block">Strategic Alliances</span>
                         <h1 className="text-4xl md:text-8xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]">
                             BUILD THE INFRASTRUCTURE <br />
                             <span className="text-accent-green">OF TOMORROW.</span>
@@ -110,7 +110,7 @@ const PartnerWithUsPage = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-24">
                         <div>
-                            <span className="label-caps !text-accent-green !mb-8">Get in Touch</span>
+                            <span className="label-caps !mb-8">Get in Touch</span>
                             <h2 className="text-6xl md:text-7xl font-black text-primary-light dark:text-white mb-12 tracking-tighter uppercase leading-[0.9]">
                                 BECOME A <br />
                                 <span className="text-accent-green">PARTNER.</span>

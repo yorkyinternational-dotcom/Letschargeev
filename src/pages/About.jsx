@@ -6,7 +6,7 @@ const About = () => {
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-green/5 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <span className="label-caps !text-accent-green !mb-10 block">Mission_Protocol</span>
+                <span className="label-caps !mb-10 block">Mission_Protocol</span>
                 <h1 className="text-7xl md:text-9xl font-black text-primary-light dark:text-white mb-16 uppercase tracking-tighter leading-[0.9]">
                     ABOUT <br />
                     <span className="text-accent-green">LCEV_SYSTEMS.</span>

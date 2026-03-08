@@ -6,8 +6,8 @@ const FAQs = () => {
             <div className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] bg-accent-green/5 rounded-full blur-[120px]"></div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <span className="label-caps !text-accent-green !mb-10 text-center block">Technical_FAQ</span>
-                <h1 className="text-6xl md:text-8xl font-black text-primary-light dark:text-white mb-12 md:mb-20 text-center uppercase tracking-tighter leading-[0.9]">
+                <span className="label-caps !mb-10 text-center block">Technical_FAQ</span>
+                <h1 className="text-6xl md:text-8xl font-black text-primary-light dark:text-white mb-10 md:mb-12 text-center uppercase tracking-tighter leading-[0.9]">
                     FREQUENTLY <br />
                     ASKED <span className="text-accent-green">GRID_INTEL.</span>
                 </h1>

@@ -39,7 +39,7 @@ const OurApp = () => {
                         >
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 border border-accent-green/20 mb-6 md:mb-8">
                                 <span className="w-2 h-2 rounded-full bg-accent-green"></span>
-                                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green">Software Ecosystem</span>
+                                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Software Ecosystem</span>
                             </div>
                             <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold mb-8 md:mb-10 leading-[1.1] md:leading-[1] tracking-tight">
                                 Integrated <br className="hidden md:block" />
@@ -81,9 +81,9 @@ const OurApp = () => {
             {/* Sub-sections Grid */}
             <section className="py-16 md:py-24 border-t border-slate-200 dark:border-white/5">
                 <div className="max-w-7xl mx-auto px-6 lg:px-12">
-                    <div className="mb-12 md:mb-24 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+                    <div className="mb-12 md:mb-16 flex flex-col lg:flex-row lg:items-end justify-between gap-12">
                         <div className="max-w-3xl">
-                            <span className="label-caps !text-accent-green !mb-6">System Architecture</span>
+                            <span className="label-caps !mb-6">System Architecture</span>
                             <h2 className="text-primary-light dark:text-white font-bold text-5xl md:text-7xl tracking-tight leading-[1]">
                                 BUILT FOR <br />
                                 <span className="text-accent-green">MISSION-CRITICAL OPS.</span>
@@ -128,7 +128,7 @@ const OurApp = () => {
                         >
                             <div className="relative z-10 mx-auto w-full max-w-[320px] aspect-[9/19] bg-white dark:bg-black rounded-[3.5rem] border-[10px] border-slate-200 dark:border-white/5 shadow-2xl overflow-hidden p-2">
                                 <div className="w-full h-full bg-primary-surface dark:bg-primary rounded-[2.8rem] flex flex-col items-center justify-center p-8">
-                                    <p className="text-[10px] font-black text-accent-green uppercase tracking-widest mb-6">Mobile Interface</p>
+                                    <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-6">Mobile Interface</p>
                                     <Zap className="text-accent-green w-12 h-12 mb-8 animate-pulse" />
                                     <div className="w-full h-1 bg-white/10 rounded-full mb-4">
                                         <div className="h-full w-2/3 bg-accent-green"></div>
@@ -139,7 +139,7 @@ const OurApp = () => {
                         </motion.div>
 
                         <div className="order-1 lg:order-2">
-                            <span className="label-caps !text-accent-green !mb-8">User Experience</span>
+                            <span className="label-caps !mb-8">User Experience</span>
                             <h2 className="text-6xl md:text-8xl font-bold mb-10 leading-[1] tracking-tight">
                                 SCAN. <br />
                                 CHARGE. <br />

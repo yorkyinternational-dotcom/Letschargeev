@@ -44,7 +44,7 @@ const LegalPage = () => {
             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--text-primary) 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="mb-12 md:mb-20">
+                <div className="mb-10 md:mb-12">
                     <h1 className="text-5xl md:text-7xl font-black text-primary-light dark:text-white mb-6 uppercase tracking-tighter leading-none">{title}</h1>
                     <div className="h-1.5 w-24 bg-accent-green rounded-full shadow-[0_0_10px_rgba(0,230,150,0.3)]"></div>
                 </div>
