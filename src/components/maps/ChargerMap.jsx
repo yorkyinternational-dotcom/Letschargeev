@@ -61,6 +61,24 @@ function MapEventsHelper({ setSelectedCharger }) {
 const ChargerMap = () => {
     const [userLocation, setUserLocation] = useState(null);
     const [selectedCharger, setSelectedCharger] = useState(null);
+    const [isDark, setIsDark] = useState(false);
+
+    useEffect(() => {
+        // Initial check
+        setIsDark(document.documentElement.classList.contains('dark'));
+
+        // Setup observer for dynamic theme changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class') {
+                    setIsDark(document.documentElement.classList.contains('dark'));
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, { attributes: true });
+        return () => observer.disconnect();
+    }, []);
 
     const findNearest = () => {
         if (!navigator.geolocation) return alert("Geolocation not supported");
@@ -74,7 +92,7 @@ const ChargerMap = () => {
     };
 
     return (
-        <div className="relative w-full h-full min-h-[600px] md:min-h-[800px] bg-[#111]">
+        <div className={`relative w-full h-full min-h-[600px] md:min-h-[800px] ${isDark ? 'bg-[#0a0a0a]' : 'bg-[#f8f9fa]'} transition-colors duration-500`}>
             <div className="absolute inset-0 z-0">
                 <MapContainer
                     center={[28.6139, 77.2090]}
@@ -82,9 +100,10 @@ const ChargerMap = () => {
                     style={{ height: '100%', width: '100%' }}
                     zoomControl={false}
                 >
-                    {/* Dark Mode CartoDB Map Tiles (Free, No Token Required) */}
+                    {/* Dynamic Map Tiles based on global theme */}
                     <TileLayer
-                        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                        key={isDark ? 'dark' : 'light'} // Force re-render of tiles on theme change
+                        url={`https://{s}.basemaps.cartocdn.com/${isDark ? 'dark_all' : 'light_all'}/{z}/{x}/{y}{r}.png`}
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
                     />
 
