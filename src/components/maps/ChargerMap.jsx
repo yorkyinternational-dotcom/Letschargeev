@@ -7,8 +7,8 @@ import { LocateFixed, Navigation, Battery } from 'lucide-react';
 // Custom Marker Icon since default Leaflet markers require image URLs that Vite sometimes mangles
 const customIcon = new L.DivIcon({
     className: 'custom-leaflet-marker',
-    html: `<div class="w-8 h-8 bg-black rounded-full border-2 border-accent-green flex items-center justify-center shadow-[0_0_15px_rgba(0,230,150,0.5)]">
-             <div class="w-3 h-3 bg-accent-green rounded-full animate-pulse"></div>
+    html: `<div class="w-8 h-8 bg-[#0a0a0a]/40 backdrop-blur-md rounded-full border-2 border-accent-green flex items-center justify-center shadow-[0_0_20px_rgba(0,230,150,0.6)]">
+             <div class="w-4 h-4 bg-accent-green rounded-full animate-pulse shadow-[0_0_10px_#00E696]"></div>
            </div>`,
     iconSize: [32, 32],
     iconAnchor: [16, 16],
@@ -92,7 +92,7 @@ const ChargerMap = () => {
     };
 
     return (
-        <div className={`relative w-full h-full min-h-[600px] md:min-h-[800px] ${isDark ? 'bg-[#0a0a0a]' : 'bg-[#f8f9fa]'} transition-colors duration-500`}>
+        <div className={`relative w-full h-full min-h-[600px] md:min-h-[800px] ${isDark ? 'bg-[#0a0a0a]' : 'bg-[#f8f9fa]'} transition-colors duration-500 overflow-hidden`}>
             <div className="absolute inset-0 z-0">
                 <MapContainer
                     center={[28.6139, 77.2090]}
@@ -124,6 +124,16 @@ const ChargerMap = () => {
                     <MapEventsHelper setSelectedCharger={setSelectedCharger} />
                 </MapContainer>
             </div>
+
+            {/* Cinematic Tech Overlays (Dark Mode Only) */}
+            {isDark && (
+                <>
+                    {/* Deep Vignette to blend map edges into the black background */}
+                    <div className="absolute inset-0 pointer-events-none z-[400] bg-[radial-gradient(circle_at_center,transparent_30%,#0a0a0a_100%)]"></div>
+                    {/* Subtle Holographic Scanlines */}
+                    <div className="absolute inset-0 pointer-events-none z-[400] opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '100% 4px' }}></div>
+                </>
+            )}
 
             {/* Find Nearest Button */}
             <div className="absolute bottom-24 md:bottom-10 left-6 md:left-10 z-[1000]">
