@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const WhatsAppFAB = () => {
-    const whatsappUrl = "https://wa.me/919650979197?text=Hello%20I%20am%20interested%20in%20your%20services";
+    const whatsappUrl = "https://wa.me/919999165790?text=Hello%20I%20am%20interested%20in%20your%20services";
 
     return (
         <motion.a
@@ -14,7 +14,7 @@ const WhatsAppFAB = () => {
             animate={{ scale: 1, opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="fixed bottom-28 right-6 md:bottom-10 md:right-10 z-[120] w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.3)] border-2 border-white/20 text-white group"
+            className="fixed bottom-24 right-6 md:bottom-10 md:right-10 z-[120] w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.3)] border-2 border-white/20 text-white group"
             aria-label="Contact us on WhatsApp"
         >
             {/* Pulsing Aura */}

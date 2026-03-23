@@ -12,9 +12,9 @@ const LegalPage = () => {
 
     const content = {
         'terms': [
-            { h2: "1. Acceptance of Terms", p: "By accessing and using Lets charge EV services, you agree to be bound by these Terms and Conditions. If you do not agree, please refrain from using our platform." },
+            { h2: "1. Acceptance of Terms", p: "By accessing and interfacing with the LCEV Systems infrastructure, you agree to be bound by these industrial-grade Terms and Conditions. If you do not agree, please refrain from engaging with our network." },
             { h2: "2. Use of Services", p: "Our charging network and software are provided for lawful purposes. Any misuse of hardware or unauthorized access to software is strictly prohibited." },
-            { h2: "3. Intellectual Property", p: "All content, branding, and technology are the exclusive property of Lets charge EV and its parent company. Unauthorized reproduction is prohibited." }
+            { h2: "3. Intellectual Property", p: "All content, branding, and technology are the exclusive property of LCEV and its parent company. Unauthorized reproduction is prohibited." }
         ],
         'privacy': [
             { h2: "1. Data Collection", p: "We collect information necessary to provide charging services, including location data, payment information, and vehicle details." },

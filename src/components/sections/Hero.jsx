@@ -38,26 +38,26 @@ const Hero = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 border border-accent-green/20 mb-8">
               <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Infrastructure of Modern Mobility</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Strategic Infrastructure for Global Mobility Systems</span>
             </div>
 
-            <h1 className="text-4xl md:text-8xl lg:text-9xl font-black text-primary-light dark:text-white mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter uppercase">
+            <h1 className="text-3xl sm:text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-primary-light dark:text-white mb-6 md:mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter uppercase italic">
               ARCHITECTING <br className="hidden md:block" />
               <span className="text-accent-green">ZERO EMISSION.</span>
             </h1>
 
             <p className="text-lg md:text-2xl text-slate-500 dark:text-slate-400 mb-10 md:mb-16 max-w-2xl font-medium leading-tight uppercase tracking-tight">
-              Industrial-grade EV charging solutions for corporate headquarters and mission-critical commercial hubs.
+              Enterprise-grade EV charging ecosystems engineered for high-density corporate environments and mission-critical industrial hubs.
             </p>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6 items-center">
-              <a href="#partner-with-us" className="btn-professional-primary w-full sm:w-auto !py-4 md:!py-6 !px-8 md:!px-12 !text-[10px] md:!text-[12px] shadow-2xl shadow-accent-green/40">
-                PRO VISION SOLUTIONS
+              <a href="#partner-with-us" className="btn-professional-primary w-full sm:w-auto !py-3.5 md:!py-5 !px-8 md:!px-12 !text-[10px] md:!text-[12px] shadow-2xl shadow-accent-green/40">
+                RETRIEVE SYSTEM BLUEPRINT
                 <ArrowRight size={18} className="ml-3" />
               </a>
 
-              <a href="#hardware" className="btn-professional w-full sm:w-auto !py-4 md:!py-6 !px-8 md:!px-12 !text-[10px] md:!text-[12px] border-slate-300 dark:border-white/10">
-                ENGINEERING SPECS
+              <a href="#hardware" className="btn-professional w-full sm:w-auto !py-3.5 md:!py-5 !px-8 md:!px-12 !text-[10px] md:!text-[12px] border-slate-300 dark:border-white/10">
+                TECHNICAL SPECIFICATIONS
               </a>
             </div>
 
@@ -104,8 +104,8 @@ const Hero = () => {
                 <div className="absolute bottom-12 left-12 right-12">
                   <div className="flex items-end justify-between">
                     <div>
-                      <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em] mb-4 block">Fleet Standard</span>
-                      <p className="text-4xl font-black text-white tracking-widest">D180X</p>
+                      <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.4em] mb-2 md:mb-4 block">Fleet Standard</span>
+                      <p className="text-2xl md:text-4xl font-black text-white tracking-widest">D180X</p>
                     </div>
                     <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white backdrop-blur-xl">
                       <ArrowRight size={20} />

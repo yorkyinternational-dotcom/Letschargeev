@@ -6,13 +6,13 @@ const BusinessModel = () => {
     const features = [
         {
             icon: <ShieldCheck className="w-8 h-8 text-accent-green" />,
-            title: "Full Asset Ownership",
-            description: "You own the hardware outright. No hidden lease terms or long-term liability beyond the equipment life cycle."
+            title: "Strategic Asset Consolidation",
+            description: "Direct ownership of critical hardware assets with zero lease-side liabilities or third-party dependencies."
         },
         {
             icon: <Settings className="w-8 h-8 text-accent-green" />,
-            title: "Complete Control",
-            description: "Define your own charging tariffs, access rules, and operating hours via our intuitive CMS dashboard."
+            title: "Operational Sovereignty",
+            description: "Complete localized control over tariff structures, access protocols, and operational parameters through our CMS."
         },
         {
             icon: <TrendingUp className="w-8 h-8 text-accent-green" />,
@@ -41,7 +41,7 @@ const BusinessModel = () => {
                             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-green">Business Strategy</span>
                         </div>
                         <h2 className="text-primary-light dark:text-white font-bold text-5xl md:text-7xl tracking-tight leading-[1] mb-8">
-                            The <span className="text-accent-green">Direct Acquisition</span> Model.
+                            Capital <span className="text-accent-green">Asset Acquisition</span> Strategy.
                         </h2>
                         <p className="text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed">
                             We empower businesses to lead the energy transition with a transparent,

@@ -6,18 +6,18 @@ const FAQs = () => {
             <div className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] bg-accent-green/5 rounded-full blur-[120px]"></div>
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <span className="label-caps !mb-10 text-center block">Technical_FAQ</span>
-                <h1 className="text-6xl md:text-8xl font-black text-primary-light dark:text-white mb-10 md:mb-12 text-center uppercase tracking-tighter leading-[0.9]">
+                <span className="label-caps !mb-10 text-center block">Technical FAQ</span>
+                <h1 className="text-4xl md:text-8xl font-black text-primary-light dark:text-white mb-10 md:mb-16 text-center uppercase tracking-tighter leading-[1] md:leading-[0.9]">
                     FREQUENTLY <br />
-                    ASKED <span className="text-accent-green">GRID_INTEL.</span>
+                    ASKED <span className="text-accent-green">GRID INTEL.</span>
                 </h1>
 
                 <div className="space-y-8">
                     {[
-                        { q: "What is LCEv Infrastructure?", a: "LCEv provides integrated EV charging solutions including hardware and management software across India, specializing in high-uptime commercial and residential hubs." },
-                        { q: "Is the hardware OCPP compliant?", a: "Yes, all LCEv hardware supports OCPP 1.6J and 2.0.1 protocols for seamless backend integration and remote management." },
-                        { q: "How do I locate a station?", a: "Use our real-time ubiquitous grid locator available on the mobile app and website for live tracking of station availability." },
-                        { q: "Do you offer fleet solutions?", a: "We provide military-grade fleet management dashboards that monitor battery health and optimize energy procurement in real-time." }
+                        { q: "What is LCEV Infrastructure?", a: "LCEV engineers integrated EV charging infrastructure architectures across the subcontinent, specializing in high-capacity commercial and residential mobility nodes." },
+                        { q: "Is the hardware OCPP compliant?", a: "Yes, all LCEV hardware is fully compliant with OCPP 1.6J and 2.0.1 protocols for seamless industrial backend integration and remote telemetry." },
+                        { q: "How do I locate a station?", a: "Leverage our persistent grid-state synchronization layer available via the LCEV mobile app for real-time tracking of high-availability charging nodes." },
+                        { q: "Do you offer fleet solutions?", a: "We provide institutional-grade fleet orchestration layers that monitor battery health metrics and optimize energy procurement during peak-generation cycles." }
                     ].map((item, i) => (
                         <div key={i} className="card-professional !p-10 bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 group hover:border-accent-green/40 cursor-pointer">
                             <div className="flex justify-between items-start mb-6 gap-4">

@@ -18,6 +18,20 @@
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 
   <title>Lets Charge EV</title>
+  <script>
+    // Inline script to prevent white flash before React loads
+    (function () {
+      try {
+        var localTheme = localStorage.getItem('theme');
+        var isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (localTheme === 'dark' || (!localTheme && isSystemDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) { }
+    })();
+  </script>
 </head>
 
 <body>

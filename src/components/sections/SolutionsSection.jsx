@@ -91,9 +91,9 @@ const SolutionsSection = () => {
     const solutions = [
         {
             id: '01',
-            title: "Residential Charging",
-            description: "Smart home charging systems with AI-driven load management and mobile control.",
-            fullDescription: "Safe, intelligent charging for your home. Our residential systems integrate with solar panels and adjust charging speeds based on household demand to prevent grid overload.",
+            title: "Private Access Infrastructure",
+            description: "Intelligent residential charging systems featuring autonomous load balancing and grid synchronization.",
+            fullDescription: "High-precision infrastructure for private environments. Our systems utilize edge-computing for dynamic load management, ensuring zero impact on local distribution networks while maximizing energy throughput.",
             icon: Cpu,
             metrics: [
                 { label: "Efficiency", value: "98.5%" },
@@ -103,9 +103,9 @@ const SolutionsSection = () => {
         },
         {
             id: '02',
-            title: "Commercial Hubs",
-            description: "High-uptime public charging infrastructure with automated billing and network management.",
-            fullDescription: "Monetizable charging solutions for malls, hospitals, and parking lots. Scalable infrastructure with OCPP 2.0.1 compliance and multi-layered security.",
+            title: "Public Network Infrastructure",
+            description: "Resilient public charging systems with deterministic uptime and automated settlement middleware.",
+            fullDescription: "Monetizable infrastructure for high-density commercial assets. Fully compliant with OCPP 2.0.1 protocols, featuring multi-layered cybersecurity and sub-second transaction processing.",
             icon: Network,
             metrics: [
                 { label: "Uptime", value: "99.9%" },
@@ -115,9 +115,9 @@ const SolutionsSection = () => {
         },
         {
             id: '03',
-            title: "Fleet Operations",
-            description: "Custom management dashboards for logistics fleets to maximize uptime and minimize TCO.",
-            fullDescription: "Military-grade fleet management. Monitor battery health, schedule charging sessions, and optimize energy procurement in real-time.",
+            title: "Fleet Mobility Systems",
+            description: "Real-time orchestration layers for logistics fleets designed to maximize operational efficiency and asset longevity.",
+            fullDescription: "Enterprise-grade fleet electrification. Monitor battery health metrics, schedule high-throughput charging sessions, and optimize peak-period energy procurement in real-time.",
             icon: Truck,
             metrics: [
                 { label: "Ops Save", value: "22%" },

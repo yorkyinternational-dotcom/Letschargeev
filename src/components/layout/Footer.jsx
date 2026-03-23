@@ -21,10 +21,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-12 md:mb-16">
           <div className="lg:col-span-4 lg:pr-8">
             <Link to="/" className="mb-12 block">
-              <Logo withText={false} theme="dark" className="h-16 md:h-20" />
+              <Logo withText={true} theme="dark" className="h-16 md:h-20" />
             </Link>
             <p className="text-white/40 text-xl max-w-md mb-12 leading-relaxed font-medium">
-              Architecting the resilient infrastructure for India's zero-emission future.
+              Architecting the resilient infrastructure for India's institutional energy transition.
               Technical authority in industrial-grade EV charging ecosystems.
             </p>
             <div className="flex gap-4">
@@ -66,12 +66,12 @@ const Footer = () => {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-8">TECHNICAL SUPPORT</p>
             <div className="space-y-6">
               <a
-                href="https://wa.me/919650979197?text=Hello%20I%20am%20interested%20in%20your%20services"
+                href="https://wa.me/919999165790?text=Hello%20I%20am%20interested%20in%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-3xl xl:text-4xl font-black text-white hover:text-accent-green transition-colors cursor-pointer tracking-tight block"
               >
-                +91 96509 79197
+                +91-9999165790
               </a>
               {/* Status Indicator */}
               <div className="flex items-center gap-3">

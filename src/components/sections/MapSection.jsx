@@ -27,29 +27,29 @@ const MapSection = () => {
                 </div>
 
                 {/* Professional Mapbox Container */}
-                <div className="w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-slate-200 dark:border-white/5 shadow-2xl relative group bg-black">
+                <div className="w-full h-[550px] md:h-[650px] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-slate-200 dark:border-white/5 shadow-2xl relative group bg-black">
                     <ChargerMap />
 
                     {/* Integrated Network Statistics Overlay */}
                     <div className="absolute top-10 right-10 z-20 hidden lg:block pointer-events-none">
-                        <div className="glass-panel p-6 rounded-2xl border-white/10">
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="p-2 bg-accent-green/20 rounded-lg">
-                                    <div className="w-2 h-2 rounded-full bg-accent-green animate-ping"></div>
+                        <div className="glass-morphic p-6 rounded-2xl border-white/10 flex flex-col gap-6">
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 bg-accent-green/20 rounded-xl flex items-center justify-center">
+                                    <div className="w-2.5 h-2.5 rounded-full bg-accent-green animate-pulse"></div>
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-black text-white uppercase tracking-widest">Network Logic</p>
+                                    <p className="text-[10px] font-black text-white uppercase tracking-[0.2em]">Network Logic</p>
                                     <p className="text-xs font-bold text-slate-400">Delhi-NCR Cluster</p>
                                 </div>
                             </div>
-                            <div className="space-y-3">
-                                <div className="flex justify-between items-center gap-12">
-                                    <span className="text-[9px] font-bold text-slate-500 uppercase">Active Nodes</span>
-                                    <span className="text-xs font-black text-white">124</span>
+                            <div className="space-y-4">
+                                <div className="flex justify-between items-center gap-16 border-b border-white/5 pb-3">
+                                    <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Active Nodes</span>
+                                    <span className="text-sm font-black text-white">124</span>
                                 </div>
-                                <div className="flex justify-between items-center gap-12">
-                                    <span className="text-[9px] font-bold text-slate-500 uppercase">Avg Uptime</span>
-                                    <span className="text-xs font-black text-accent-green">99.98%</span>
+                                <div className="flex justify-between items-center gap-16">
+                                    <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Avg Uptime</span>
+                                    <span className="text-sm font-black text-accent-green">99.98%</span>
                                 </div>
                             </div>
                         </div>

@@ -11,10 +11,10 @@ const HardwareSection = () => {
             category: "DC FAST CHARGER",
             power: "60kW / 180kW",
             specs: [
-                "Dual-port simultaneous charging",
-                "OCPP 1.6J / 2.0.1 Cloud Ready",
-                "IP65 Weatherproof Casing",
-                "Dynamic Load Balancing"
+                "Dual-port simultaneous distribution",
+                "OCPP 2.0.1 Cloud Integrated",
+                "IP65 Atmospheric Protection",
+                "Autonomous Load Management"
             ],
             image: dcCharger
         },
@@ -23,10 +23,10 @@ const HardwareSection = () => {
             category: "AC HOME & BUSINESS",
             power: "7.4kW / 22kW",
             specs: [
-                "Type 2 Universal Compatibility",
-                "Integrated App Control",
-                "Compact Anti-corrosion Body",
-                "Auto-scheduling Features"
+                "Type 2 Universal Interface",
+                "Bi-directional App Integration",
+                "High-Tolerance Composite Body",
+                "Configurable Load Scheduling"
             ],
             image: acWallbox
         },
@@ -68,7 +68,7 @@ const HardwareSection = () => {
                     </div>
                     <div className="lg:max-w-sm">
                         <p className="text-xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
-                            Industrial-grade infrastructure built for Indian conditions.
+                            Robust infrastructure engineered for extreme thermal and atmospheric resilience.
                             Certified <span className="text-primary-light dark:text-white font-bold">IP65 Waterproof</span> and
                             <span className="text-primary-light dark:text-white font-bold"> IK10 Impact Resistant.</span>
                         </p>
@@ -87,7 +87,7 @@ const HardwareSection = () => {
                         >
                             <div className="glass-panel h-full flex flex-col justify-between rounded-[3rem] overflow-hidden transition-all duration-700 hover:shadow-[0_40px_80px_-20px_rgba(34,197,94,0.15)]">
                                 {/* Product Spotlight Container */}
-                                <div className="aspect-[1/1] bg-slate-50/50 dark:bg-black/40 flex items-center justify-center p-12 relative overflow-hidden">
+                                <div className="aspect-[1/1] bg-black flex items-center justify-center p-12 relative overflow-hidden shadow-[inset_0_0_60px_rgba(0,0,0,0.8)]">
                                     {/* Geometric Background Element */}
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-accent-green/10 rounded-bl-[4rem] group-hover:w-40 group-hover:h-40 transition-all duration-700"></div>
 
@@ -98,7 +98,7 @@ const HardwareSection = () => {
                                     />
 
                                     <div className="absolute top-8 left-8">
-                                        <div className="px-4 py-1.5 glass-morphic rounded-full text-[9px] font-black text-primary-light dark:text-white uppercase tracking-[0.2em]">
+                                        <div className="px-4 py-1.5 glass-morphic rounded-full text-[9px] font-black text-white uppercase tracking-[0.2em]">
                                             {product.power}
                                         </div>
                                     </div>

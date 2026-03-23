@@ -25,15 +25,15 @@ const StatsSection = () => {
                             transition={{ delay: i * 0.1, duration: 0.8 }}
                             className="flex flex-col group relative"
                         >
-                            <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.3em] mb-4">
+                            <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] md:tracking-[0.3em] mb-3 md:mb-4">
                                 / {stat.label}
                             </p>
-                            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-4 group-hover:text-accent-green transition-colors duration-500">
+                            <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter mb-3 md:mb-4 group-hover:text-accent-green transition-colors duration-500">
                                 {stat.value}
                             </h2>
-                            <div className="flex items-center gap-4">
-                                <div className="w-8 h-px bg-white/10 group-hover:bg-accent-green/50 transition-all"></div>
-                                <p className="text-[10px] font-bold text-white/30 uppercase tracking-[0.2em]">
+                            <div className="flex items-center gap-3 md:gap-4">
+                                <div className="w-6 md:w-8 h-px bg-white/10 group-hover:bg-accent-green/50 transition-all"></div>
+                                <p className="text-[9px] md:text-[10px] font-bold text-white/30 uppercase tracking-[0.1em] md:tracking-[0.2em]">
                                     {stat.suffix}
                                 </p>
                             </div>

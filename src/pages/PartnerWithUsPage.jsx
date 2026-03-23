@@ -11,19 +11,19 @@ const PartnerWithUsPage = () => {
             icon: Building2,
             title: "Real Estate Partners",
             description: "Monetize your parking assets. Transform your commercial, residential, or retail space into a high-yield charging hub.",
-            benefits: ["Revenue Sharing", "Property Value Appreciation", "Green Certification"]
+            benefits: ["Revenue Optimization", "Asset Value Appreciation", "ESG Certification"]
         },
         {
             icon: Globe,
             title: "CPO / Franchise",
             description: "Become a Network Operator. Leverage our technical stack to start and scale your own regional charging business.",
-            benefits: ["Full IoT Stack Access", "Brand Support", "Unified Billing System"]
+            benefits: ["Full Stack Telemetry", "Strategic Brand Alignment", "Unified Settlement Layer"]
         },
         {
             icon: Truck,
             title: "Fleet Operators",
             description: "Future-proof your logistics. Transition to electric with dedicated captive charging solutions and uptime guarantees.",
-            benefits: ["Special Energy Rates", "Uptime Monitoring", "TCO Optimization"]
+            benefits: ["Institutional Energy Rates", "Uptime Service Level Guarantees", "TCO Optimization Matrix"]
         }
     ];
 
@@ -63,12 +63,12 @@ const PartnerWithUsPage = () => {
                     >
                         <span className="label-caps !mb-8 block">Strategic Alliances</span>
                         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white mb-6 md:mb-10 tracking-tighter uppercase leading-[1.1] md:leading-[1] w-full flex flex-col items-center">
-                            <span className="block mb-1 md:mb-2 text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-none">BUILD THE</span>
-                            <span className="block text-[34px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight w-full leading-none">INFRASTRUCTURE</span>
-                            <span className="text-accent-green block mt-1 md:mt-2 text-[42px] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-none">OF TOMORROW.</span>
+                            <span className="block mb-1 md:mb-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-none">BUILD THE</span>
+                            <span className="block text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight w-full leading-none">INFRASTRUCTURE</span>
+                            <span className="text-accent-green block mt-1 md:mt-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-none">OF TOMORROW.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/40 max-w-3xl mx-auto font-medium leading-relaxed uppercase tracking-tight">
-                            LCEv is seeking visionary partners to accelerate the transition to sustainable mobility through technical authority.
+                            LCEV is seeking visionary partners to accelerate the transition to resilient mobility through technological authority.
                         </p>
                     </motion.div>
                 </div>
@@ -118,7 +118,7 @@ const PartnerWithUsPage = () => {
                                 <span className="text-accent-green">PARTNER.</span>
                             </h2>
                             <p className="text-xl text-slate-500 dark:text-slate-400 mb-16 font-medium leading-relaxed">
-                                Share your details and our strategic partnerships team will reach out with a technical deployment blueprint.
+                                Share your project parameters and our institutional engineering team will reach out with a technical deployment blueprint.
                             </p>
 
                             <div className="space-y-10">
@@ -129,12 +129,12 @@ const PartnerWithUsPage = () => {
                                     <div>
                                         <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">Direct Line</p>
                                         <a
-                                            href="https://wa.me/919650979197?text=Hello%20I%20am%20interested%20in%20your%20services"
+                                            href="https://wa.me/919999165790?text=Hello%20I%20am%20interested%20in%20your%20services"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-xl font-black text-primary-light dark:text-white uppercase tracking-tight hover:text-accent-green transition-colors"
                                         >
-                                            +91 96509 79197
+                                            +91-9999165790
                                         </a>
                                     </div>
                                 </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight, Sun, Moon, Cpu } from 'lucide-react';
+import { Menu, X, ChevronRight, Sun, Moon, Cpu, User } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
@@ -41,17 +41,17 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className={`fixed top-0 left-0 w-full transition-all duration-500 ${isOpen ? 'z-[110]' : 'z-50'} ${scrolled ? 'py-4' : 'py-5'}`}>
       {/* Dynamic Background */}
       <div className={`absolute inset-0 transition-all duration-700 ${scrolled && !isOpen
-        ? 'bg-white/80 dark:bg-black/80 backdrop-blur-2xl border-b border-slate-200 dark:border-white/10 shadow-2xl'
+        ? 'bg-white/80 dark:bg-white/5 backdrop-blur-2xl border-b border-slate-200 dark:border-white/10 shadow-2xl'
         : 'bg-transparent'
         }`}></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center relative z-[120]">
-        <Link to="/" className="flex items-center group shrink-0" aria-label="LCEv Home">
-          <Logo className="h-10 md:h-12 lg:h-16" withText={false} theme={isOpen ? 'dark' : effectiveTheme} />
+        <Link to="/" className="flex items-center group shrink-0" aria-label="LCEV Home">
+          <Logo className="h-10 md:h-12 lg:h-14" withText={true} theme={isOpen ? 'dark' : effectiveTheme} />
         </Link>
 
         {/* Desktop Navigation - Hidden on Mobile */}
-        <div className="hidden lg:flex items-center gap-0">
+        <div className="hidden xl:flex items-center gap-0">
           {allLinks.map((link) => (
             <Link
               key={link.name}
@@ -94,6 +94,19 @@ const Navbar = ({ theme, toggleTheme }) => {
             <div className="absolute inset-0 bg-accent-green/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
           </button>
 
+          {/* Login / Auth Trigger */}
+          <Link
+            to="/login"
+            aria-label="Access Account"
+            className={`hidden md:flex items-center gap-2 px-4 py-2.5 rounded-full border transition-all duration-500 text-[9px] font-black uppercase tracking-[0.2em] shadow-sm ${effectiveTheme === 'dark'
+              ? 'bg-white/5 border-white/10 text-white hover:bg-white hover:text-black'
+              : 'bg-black text-white border-transparent hover:bg-slate-800'
+              }`}
+          >
+            <User size={12} />
+            LOGIN
+          </Link>
+
           <Link
             to="/partner-with-us"
             className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-accent-green text-black text-[9px] font-black uppercase tracking-[0.2em] rounded-full hover:bg-white hover:text-black transition-all duration-500 shadow-lg shadow-accent-green/20"
@@ -107,7 +120,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-label="Toggle navigation menu"
-            className={`lg:hidden p-3 rounded-full border transition-all ${isOpen || effectiveTheme === 'dark' ? 'bg-white/5 border-white/10 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
+            className={`xl:hidden p-3 rounded-full border transition-all ${isOpen || effectiveTheme === 'dark' ? 'bg-white/5 border-white/10 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
               }`}
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -122,7 +135,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] lg:hidden bg-black flex flex-col justify-center px-10 h-screen w-screen overflow-hidden"
+            className="fixed inset-0 z-[100] xl:hidden bg-black flex flex-col justify-center px-10 h-screen w-screen overflow-hidden"
           >
             {/* Engineering Grid Background */}
             <div className="absolute inset-0 opacity-[0.05]"
@@ -158,9 +171,20 @@ const Navbar = ({ theme, toggleTheme }) => {
                 className="mt-16 pt-16 border-t border-white/10"
               >
                 <Link
+                  to="/login"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-between group py-4 border-b border-white/10"
+                >
+                  <div className="flex items-center gap-3 text-white group-hover:text-accent-green transition-all">
+                    <span className="text-xl font-bold uppercase tracking-widest">LOGIN / SIGN UP</span>
+                    <ChevronRight size={24} />
+                  </div>
+                </Link>
+
+                <Link
                   to="/partner-with-us"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between group"
+                  className="flex items-center justify-between group pt-4"
                 >
                   <div className="flex items-center gap-3 text-white group-hover:text-accent-green transition-all">
                     <span className="text-xl font-bold uppercase tracking-widest">PARTNER WITH US</span>

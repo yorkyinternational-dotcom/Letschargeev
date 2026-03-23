@@ -17,28 +17,28 @@ const SustainabilitySection = () => {
 
     const initiatives = [
         {
-            title: "Renewable Sync",
+            title: "Grid-Source Optimization",
             icon: <Sun size={20} />,
-            metric: "100%",
-            desc: "Dynamic shifting to solar and wind sources during peak generation cycles."
+            metric: "100% SYNC",
+            desc: "Automated energy procurement from certified solar and wind sources during peak generation cycles."
         },
         {
-            title: "Smart Grid Tech",
+            title: "Autonomous Load Orchestration",
             icon: <Zap size={20} />,
-            metric: "AI-DRIVEN",
-            desc: "Load balancing to reduce stress on local municipal power grids."
+            metric: "GRID-AWARE",
+            desc: "Advanced load management protocols to mitigate local distribution network congestion and peak-demand stress."
         },
         {
-            title: "Zero Emission",
+            title: "Environmental Integrity",
             icon: <Leaf size={20} />,
-            metric: "OFFSET",
-            desc: "Each station offsets construction footprint within 14 operational months."
+            metric: "NET-ZERO",
+            desc: "Each infrastructure unit is engineered to offset its total manufacturing carbon debt within 14 months."
         },
         {
-            title: "Technical Quality",
+            title: "Asset Sustainability",
             icon: <ShieldCheck size={20} />,
-            metric: "95% RECYCLABLE",
-            desc: "Sustainable components used in our flagship charging station designs."
+            metric: "95% CIRCULAR",
+            desc: "Utilizing modular, high-recyclability industrial components to ensure long-term asset-level sustainability."
         }
     ];
 
@@ -57,10 +57,10 @@ const SustainabilitySection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
                     <div className="lg:col-span-12 mb-16">
                         <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                            <span className="label-caps !mb-8 italic">Environmental Proof-of-Work</span>
+                            <span className="label-caps !mb-8 italic">Audit-Ready ESG Performance</span>
                             <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-primary-light dark:text-white mb-12 tracking-tighter uppercase leading-[0.9]">
-                                SUSTAINABLE <br />
-                                <span className="text-accent-green">PRECISION.</span>
+                                GRID <br />
+                                <span className="text-accent-green">OPTIMIZATION.</span>
                             </h2>
                         </motion.div>
 
@@ -151,7 +151,7 @@ const SustainabilitySection = () => {
                                         />
                                     </div>
                                     <p className="text-xs text-white/60 font-medium leading-relaxed uppercase tracking-tight">
-                                        LCEv infrastructure is engineered for maximum uptime and minimum environmental overhead. Verified by industrial audit protocols.
+                                        LCEV infrastructure is engineered for maximum uptime and minimum environmental overhead. Verified by industrial audit protocols.
                                     </p>
                                     <button className="w-full btn-professional-primary !py-4 tech-glow">
                                         Request Impact Report

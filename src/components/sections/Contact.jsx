@@ -18,7 +18,7 @@ const Contact = () => {
 
                         <div className="space-y-12">
                             {[
-                                { label: "Operations", value: "+91 96509 79197", href: "https://wa.me/919650979197?text=Hello%20I%20am%20interested%20in%20your%20services" },
+                                { label: "Operations", value: "+91-9999165790", href: "https://wa.me/919999165790?text=Hello%20I%20am%20interested%20in%20your%20services" },
                                 { label: "Global Support", value: "support@lcev.in" },
                                 { label: "Innovation Hub", value: "Noida Sector 63" }
                             ].map((item, i) => (
