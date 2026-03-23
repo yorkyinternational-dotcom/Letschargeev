@@ -108,7 +108,7 @@ const SavingsCalculator = () => {
 
                     <motion.div
                         layout
-                        className="bg-primary dark:bg-black p-16 md:p-24 rounded-[3rem] text-white overflow-hidden relative border border-white/5 shadow-2xl flex flex-col justify-center">
+                        className="bg-primary dark:bg-black p-10 lg:p-16 xl:p-20 rounded-[3rem] text-white overflow-hidden relative border border-white/5 shadow-2xl flex flex-col justify-center">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent-green/10 blur-[80px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
 
                         <div className="relative z-10 space-y-16 text-center lg:text-left">
@@ -119,7 +119,7 @@ const SavingsCalculator = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                 >
                                     <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-4">Estimated Monthly {mode === 'consumer' ? 'Savings' : 'Profit'}</p>
-                                    <h3 className="text-7xl md:text-9xl font-black text-accent-green tracking-tighter leading-none italic">
+                                    <h3 className="text-5xl sm:text-7xl lg:text-[4.5rem] xl:text-8xl font-black text-accent-green tracking-tighter leading-none italic truncate overflow-hidden">
                                         ₹{Math.round(monthlySavings).toLocaleString()}
                                     </h3>
                                 </motion.div>
@@ -131,7 +131,7 @@ const SavingsCalculator = () => {
                                     transition={{ delay: 0.1 }}
                                 >
                                     <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-4">Projected Annual {mode === 'consumer' ? 'Savings' : 'Profit'}</p>
-                                    <h3 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none italic">
+                                    <h3 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white tracking-tighter leading-none italic truncate overflow-hidden">
                                         ₹{Math.round(monthlySavings * 12).toLocaleString()}
                                     </h3>
                                 </motion.div>
