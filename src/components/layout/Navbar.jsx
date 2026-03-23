@@ -131,69 +131,82 @@ const Navbar = ({ theme, toggleTheme }) => {
       {/* System Overlay Menu (Mobile) */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] xl:hidden bg-black flex flex-col justify-center px-10 h-screen w-screen overflow-hidden"
-          >
-            {/* Engineering Grid Background */}
-            <div className="absolute inset-0 opacity-[0.05]"
-              style={{ backgroundImage: 'radial-gradient(#00E696 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
-            </div>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 z-[100] xl:hidden bg-black/80 backdrop-blur-md"
+            />
+            
+            {/* Premium Aesthetic Side Drawer */}
+            <motion.div
+              initial={{ x: '100%', borderTopLeftRadius: '100px', borderBottomLeftRadius: '100px' }}
+              animate={{ x: 0, borderTopLeftRadius: '40px', borderBottomLeftRadius: '40px' }}
+              exit={{ x: '100%', borderTopLeftRadius: '100px', borderBottomLeftRadius: '100px' }}
+              transition={{ type: "spring", stiffness: 200, damping: 25 }}
+              className="fixed top-0 right-0 z-[101] xl:hidden bg-[#0a0f0d]/90 backdrop-blur-3xl w-[85vw] sm:w-[350px] md:w-1/3 h-[100dvh] flex flex-col pt-32 pb-12 px-8 overflow-y-auto shadow-[-30px_0_80px_rgba(0,230,150,0.05)] border-l border-white/10"
+            >
+              {/* Engineering Grid Background */}
+              <div className="absolute inset-0 opacity-[0.03]"
+                style={{ backgroundImage: 'radial-gradient(#00E696 1px, transparent 1px)', backgroundSize: '30px 30px' }}>
+              </div>
 
+              {/* Dynamic Glow Injector */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent-green/5 blur-[100px] rounded-full pointer-events-none" />
 
+              <div className="flex flex-col gap-8 relative z-10">
+                {allLinks.map((link, i) => (
+                  <motion.div
+                    key={link.id}
+                    initial={{ x: 40, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: i * 0.05 + 0.1, type: "spring", stiffness: 200 }}
+                  >
+                    <Link
+                      to={link.path}
+                      onClick={() => setIsOpen(false)}
+                      className="group flex flex-col"
+                    >
+                      <div className="flex items-center gap-4">
+                        <span className="w-8 h-[2px] bg-accent-green/0 group-hover:bg-accent-green transition-all duration-500 -translate-x-4 group-hover:translate-x-0" />
+                        <span className="text-3xl sm:text-4xl font-black uppercase tracking-tighter text-white/50 group-hover:text-white transition-all duration-500">
+                          {link.name}
+                        </span>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
 
-            <div className="flex flex-col gap-8 relative z-10">
-              {allLinks.map((link, i) => (
                 <motion.div
-                  key={link.id}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: i * 0.1 }}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="mt-8 pt-8 border-t border-white/10"
                 >
                   <Link
-                    to={link.path}
+                    to="/login"
                     onClick={() => setIsOpen(false)}
-                    className="group flex items-baseline gap-6"
+                    className="flex items-center justify-between group py-5 border-b border-white/5 hover:border-accent-green/30 transition-all"
                   >
-                    <span className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white group-hover:text-accent-green transition-all">
-                      {link.name}
-                    </span>
+                    <span className="text-lg font-bold uppercase tracking-widest text-white/70 group-hover:text-accent-green transition-all">Account Access</span>
+                    <ChevronRight size={20} className="text-white/20 group-hover:text-accent-green group-hover:translate-x-1 transition-all" />
+                  </Link>
+
+                  <Link
+                    to="/partner-with-us"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-between group py-5 border-b border-transparent hover:border-accent-green/30 transition-all"
+                  >
+                    <span className="text-lg font-bold uppercase tracking-widest text-white/70 group-hover:text-accent-green transition-all">Partner Portal</span>
+                    <ChevronRight size={20} className="text-white/20 group-hover:text-accent-green group-hover:translate-x-1 transition-all" />
                   </Link>
                 </motion.div>
-              ))}
-
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                className="mt-16 pt-16 border-t border-white/10"
-              >
-                <Link
-                  to="/login"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between group py-4 border-b border-white/10"
-                >
-                  <div className="flex items-center gap-3 text-white group-hover:text-accent-green transition-all">
-                    <span className="text-xl font-bold uppercase tracking-widest">LOGIN / SIGN UP</span>
-                    <ChevronRight size={24} />
-                  </div>
-                </Link>
-
-                <Link
-                  to="/partner-with-us"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between group pt-4"
-                >
-                  <div className="flex items-center gap-3 text-white group-hover:text-accent-green transition-all">
-                    <span className="text-xl font-bold uppercase tracking-widest">PARTNER WITH US</span>
-                    <ChevronRight size={24} />
-                  </div>
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
